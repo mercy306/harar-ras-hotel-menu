@@ -46,7 +46,13 @@ export type HotelInput = Omit<AdminData['hotel'], 'currency' | 'tables' | 'publi
 }
 
 export const api = {
-  fetchMenu: () => request<PublicMenu>('/api/menu'),
+  fetchMenu: async () => {
+    try {
+      return await request<PublicMenu>('/api/menu')
+    } catch {
+      return await request<PublicMenu>('/menu.json')
+    }
+  },
 
   login: (password: string) => request<{ token: string }>('/api/admin/login', {
     method: 'POST',

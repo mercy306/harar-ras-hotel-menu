@@ -9,7 +9,8 @@
     "build": "tsc -b && vite build",
     "typecheck": "tsc -b --pretty",
     "preview": "vite preview",
-    "start": "node server/index.mjs"
+    "start": "node server/index.mjs",
+    "export:menu": "node scripts/export-menu.mjs"
   },
   "dependencies": {
     "cors": "^2.8.5",
