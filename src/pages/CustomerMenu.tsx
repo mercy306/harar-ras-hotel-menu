@@ -375,8 +375,14 @@ function HomePage({
       <div className="poster__panel poster__panel--cover">
         <div className="poster__top">
           <svg className="poster__crown" viewBox="0 0 64 44" aria-hidden="true">
-            <path d="M5 33V11l13 12L32 5l14 18 13-12v22z" fill="#f2871f" />
-            <rect x="5" y="36" width="54" height="5" rx="2.5" fill="#f6ece2" />
+            <defs>
+              <linearGradient id="crownGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="#f0425e" />
+                <stop offset="100%" stopColor="#5cb8ff" />
+              </linearGradient>
+            </defs>
+            <path d="M5 33V11l13 12L32 5l14 18 13-12v22z" fill="url(#crownGrad)" />
+            <rect x="5" y="36" width="54" height="5" rx="2.5" fill="#f5f2f7" />
           </svg>
           <div className="poster__brand">
             <span className="poster__logo">{lang === 'am' ? hotel.nameAm : hotel.nameEn}</span>
