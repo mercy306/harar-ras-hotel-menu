@@ -271,10 +271,6 @@ function itemLabel(item: { nameEn: string; nameAm: string }, lang: Lang): string
   return lang === 'am' ? item.nameAm || item.nameEn : item.nameEn
 }
 
-function itemSub(item: { nameEn: string; nameAm: string }, lang: Lang): string {
-  return lang === 'am' ? item.nameEn : item.nameAm
-}
-
 function catLabel(cat: { nameEn: string; nameAm: string }, lang: Lang): string {
   return lang === 'am' ? cat.nameAm || cat.nameEn : cat.nameEn
 }
@@ -312,7 +308,6 @@ function MenuItems({
                 <span className="item__dots" aria-hidden="true"></span>
                 <span className="item__price">{formatPrice(item.price, currency)}</span>
               </div>
-              <p className="item__sub">{itemSub(item, lang)}</p>
               {(lang === 'en' ? item.descriptionEn : item.descriptionAm) && (
                 <p className="item__desc">{lang === 'en' ? item.descriptionEn : item.descriptionAm}</p>
               )}
@@ -523,7 +518,6 @@ function CategoryPage({
   const others = menu.categories.filter((c) => c.id !== category.id)
   const t = (en: string, am: string) => (lang === 'am' ? am : en)
   const name = catLabel(category, lang)
-  const sub = lang === 'am' ? category.nameEn : category.nameAm
 
   return (
     <div className="detail">
@@ -541,7 +535,6 @@ function CategoryPage({
             {category.emoji}
           </span>
           <h1 className="cat-hero__name">{name}</h1>
-          {sub !== name && <p className="cat-hero__sub">{sub}</p>}
           <div className="cat-hero__meta">
             <span className="cat-hero__count">
               {category.items.length} {t('items', 'እቃዎች')}
@@ -646,9 +639,7 @@ function ItemPage({
   }
 
   const name = itemLabel(item, lang)
-  const sub = itemSub(item, lang)
   const desc = lang === 'am' ? item.descriptionAm || item.descriptionEn : item.descriptionEn
-  const otherDesc = lang === 'am' ? item.descriptionEn : item.descriptionAm
   const backLabel = backCategory ? catLabel(backCategory, lang) : t('Menu', 'ምናሌ')
   const others = category.items.filter((i) => i.id !== item.id)
   const gallery: MenuItem[] = [item, ...others].filter((i): i is MenuItem => Boolean(i.image))
@@ -690,7 +681,6 @@ function ItemPage({
           </div>
 
           <h1 className="detail__name">{name}</h1>
-          {sub !== name && <div className="detail__sub">{sub}</div>}
 
           <div className="detail__price-row">
             <span className="detail__price">{formatPrice(item.price, hotel.currency)}</span>
@@ -711,27 +701,6 @@ function ItemPage({
                   </li>
                 ))}
               </ul>
-            </div>
-          )}
-
-          {((lang === 'am' ? item.ingredientsEn : item.ingredientsAm) ?? []).length > 0 && (
-            <div className="detail__ing detail__ing--alt">
-              <div className="detail__ing-title">
-                {lang === 'am' ? 'Ingredients' : 'ግብዎች'}
-              </div>
-              <ul className="detail__ing-list">
-                {((lang === 'am' ? item.ingredientsEn : item.ingredientsAm) ?? []).map((ing) => (
-                  <li key={ing} className="detail__ing-item">
-                    {ing}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-          {otherDesc && otherDesc !== desc && (
-            <div className="detail__other">
-              <span className="detail__other-label">{lang === 'am' ? 'English' : 'አማርኛ'}</span>
-              <p>{otherDesc}</p>
             </div>
           )}
 
