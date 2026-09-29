@@ -692,6 +692,36 @@ function ItemPage({
           </div>
 
           {desc && <p className="detail__desc">{desc}</p>}
+
+          {((lang === 'am' ? item.ingredientsAm : item.ingredientsEn) ?? []).length > 0 && (
+            <div className="detail__ing">
+              <div className="detail__ing-title">
+                {lang === 'am' ? 'ግብዎች' : 'Ingredients'}
+              </div>
+              <ul className="detail__ing-list">
+                {((lang === 'am' ? item.ingredientsAm : item.ingredientsEn) ?? []).map((ing) => (
+                  <li key={ing} className="detail__ing-item">
+                    {ing}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {((lang === 'am' ? item.ingredientsEn : item.ingredientsAm) ?? []).length > 0 && (
+            <div className="detail__ing detail__ing--alt">
+              <div className="detail__ing-title">
+                {lang === 'am' ? 'Ingredients' : 'ግብዎች'}
+              </div>
+              <ul className="detail__ing-list">
+                {((lang === 'am' ? item.ingredientsEn : item.ingredientsAm) ?? []).map((ing) => (
+                  <li key={ing} className="detail__ing-item">
+                    {ing}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
           {otherDesc && otherDesc !== desc && (
             <div className="detail__other">
               <span className="detail__other-label">{lang === 'am' ? 'English' : 'አማርኛ'}</span>

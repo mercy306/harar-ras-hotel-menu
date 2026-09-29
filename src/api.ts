@@ -37,6 +37,8 @@ export interface ItemInput {
   image: string | null
   available: boolean
   spicy: boolean
+  ingredientsEn: string[]
+  ingredientsAm: string[]
 }
 
 export type HotelInput = Omit<AdminData['hotel'], 'currency' | 'tables' | 'publicUrl'> & {

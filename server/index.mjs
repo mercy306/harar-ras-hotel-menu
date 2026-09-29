@@ -71,6 +71,10 @@ const textOrNull = (value, max = 1000) => {
   const t = clean(value, max)
   return t === '' ? null : t
 }
+const ingredientList = (value) => {
+  const arr = Array.isArray(value) ? value : typeof value === 'string' ? value.split(/[,\n]/) : []
+  return arr.map((v) => clean(v, 80)).filter(Boolean).slice(0, 24)
+}
 
 const sessions = new Map()
 const SESSION_TTL = 24 * 60 * 60 * 1000
@@ -252,6 +256,8 @@ app.post('/api/admin/items', requireAuth, (req, res) => {
     image: textOrNull(b.image, 300),
     available: b.available !== false,
     spicy: b.spicy === true,
+    ingredientsEn: ingredientList(b.ingredientsEn),
+    ingredientsAm: ingredientList(b.ingredientsAm),
     sortOrder: b.sortOrder !== undefined ? num(b.sortOrder, 0) : db.items.filter((i) => i.categoryId === categoryId).length,
   }
   db.items.push(item)
@@ -271,6 +277,8 @@ app.put('/api/admin/items/:id', requireAuth, (req, res) => {
   item.image = textOrNull(b.image, 300) === null ? null : textOrNull(b.image, 300)
   item.available = b.available === true
   item.spicy = b.spicy === true
+  if (b.ingredientsEn !== undefined) item.ingredientsEn = ingredientList(b.ingredientsEn)
+  if (b.ingredientsAm !== undefined) item.ingredientsAm = ingredientList(b.ingredientsAm)
   if (b.categoryId && db.categories.some((c) => c.id === b.categoryId)) item.categoryId = b.categoryId
   if (b.sortOrder !== undefined) item.sortOrder = num(b.sortOrder, item.sortOrder)
   saveDb()

@@ -442,6 +442,8 @@ interface ItemForm {
   nameAm: string
   descriptionEn: string
   descriptionAm: string
+  ingredientsEn: string
+  ingredientsAm: string
   price: string
   image: string | null
   available: boolean
@@ -469,6 +471,8 @@ function ItemModal({
     nameAm: item?.nameAm ?? '',
     descriptionEn: item?.descriptionEn ?? '',
     descriptionAm: item?.descriptionAm ?? '',
+    ingredientsEn: (item?.ingredientsEn ?? []).join(', '),
+    ingredientsAm: (item?.ingredientsAm ?? []).join(', '),
     price: item ? String(item.price) : '',
     image: item?.image ?? null,
     available: item?.available ?? true,
@@ -489,6 +493,14 @@ function ItemModal({
       nameAm: form.nameAm,
       descriptionEn: form.descriptionEn,
       descriptionAm: form.descriptionAm,
+      ingredientsEn: form.ingredientsEn
+        .split(/[,\n]/)
+        .map((v) => v.trim())
+        .filter(Boolean),
+      ingredientsAm: form.ingredientsAm
+        .split(/[,\n]/)
+        .map((v) => v.trim())
+        .filter(Boolean),
       price: Number(form.price) || 0,
       image: form.image,
       available: form.available,
@@ -568,6 +580,25 @@ function ItemModal({
             value={form.descriptionAm}
             onChange={(e) => setForm({ ...form, descriptionAm: e.target.value })}
             placeholder="አጭር መግለጫ"
+          />
+        </label>
+
+        <label>
+          Ingredients (English) — comma separated
+          <textarea
+            rows={2}
+            value={form.ingredientsEn}
+            onChange={(e) => setForm({ ...form, ingredientsEn: e.target.value })}
+            placeholder="beef, mitmita, niter kibbeh, ayib cheese"
+          />
+        </label>
+        <label>
+          ግብዎች (አማርኛ) — በኮማ ይለያሉ
+          <textarea
+            rows={2}
+            value={form.ingredientsAm}
+            onChange={(e) => setForm({ ...form, ingredientsAm: e.target.value })}
+            placeholder="በርገር፣ ሚጥሚጣ፣ ንጥር ቅቤ፣ አይብ"
           />
         </label>
 

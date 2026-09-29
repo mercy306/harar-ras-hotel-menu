@@ -27,7 +27,25 @@
           "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Misir%20Wot%20and%20Gomen%20Besiga%20-%20Abyssinia%2C%20Brighton.jpg?width=420",
           "available": true,
           "spicy": true,
-          "sortOrder": 1
+          "sortOrder": 1,
+          "ingredientsEn": [
+            "Mutinjera (teff pancake)",
+            "Beef or lamb wot",
+            "Onion",
+            "Tomato",
+            "Garlic",
+            "Berbere spice",
+            "Niter kibbeh"
+          ],
+          "ingredientsAm": [
+            "ሙጥንጀራ",
+            "የበሬ ወይም የበግራ ወጥ",
+            "ሽንኩርት",
+            "ቲማቲም",
+            "ጉልበት",
+            "በርበሬ",
+            "ንጥር ቅቤ"
+          ]
         },
         {
           "id": "i-02",
@@ -40,7 +58,23 @@
           "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kitfo%20(Ethiopian%20Tartar).jpg?width=420",
           "available": true,
           "spicy": true,
-          "sortOrder": 2
+          "sortOrder": 2,
+          "ingredientsEn": [
+            "Minced raw beef",
+            "Mitmita (spiced butter)",
+            "Niter kibbeh",
+            "Ayib cheese",
+            "Gebs (stewed herbs)",
+            "Injera"
+          ],
+          "ingredientsAm": [
+            "የተቀቀለ ጥሬ የበሬ ሥጋ",
+            "ሚጥሚጣ (ቅመም የተለቀ ቅባ)",
+            "ንጥር ቅቤ",
+            "አይብ",
+            "ጎመን",
+            "እንጀራ"
+          ]
         },
         {
           "id": "i-03",
@@ -53,7 +87,27 @@
           "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Injera%20and%20doro%20wat.jpg?width=420",
           "available": true,
           "spicy": true,
-          "sortOrder": 3
+          "sortOrder": 3,
+          "ingredientsEn": [
+            "Chicken",
+            "Onion",
+            "Tomato",
+            "Garlic",
+            "Red berbere",
+            "Butter",
+            "Niter kibbeh",
+            "Boiled eggs"
+          ],
+          "ingredientsAm": [
+            "ዶሮ",
+            "ሽንኩርት",
+            "ቲማቲም",
+            "ጉልበት",
+            "ቀይ በርበሬ",
+            "ቅባ",
+            "ንጥር ቅቤ",
+            "የተቀላሉ እንቁላል"
+          ]
         },
         {
           "id": "i-04",
@@ -66,7 +120,25 @@
           "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethiopian%20wat.jpg?width=420",
           "available": true,
           "spicy": true,
-          "sortOrder": 4
+          "sortOrder": 4,
+          "ingredientsEn": [
+            "Beef chunks",
+            "Onion",
+            "Tomato",
+            "Garlic",
+            "Red berbere",
+            "Niter kibbeh",
+            "Injera"
+          ],
+          "ingredientsAm": [
+            "የበሬ ሥጋ ምስሎች",
+            "ሽንኩርት",
+            "ቲማቲም",
+            "ጉልበት",
+            "ቀይ በርበሬ",
+            "ንጥር ቅቤ",
+            "እንጀራ"
+          ]
         },
         {
           "id": "i-05",
@@ -79,7 +151,23 @@
           "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fastenessen%20fasting%20meal.JPG?width=420",
           "available": true,
           "spicy": false,
-          "sortOrder": 5
+          "sortOrder": 5,
+          "ingredientsEn": [
+            "Lentils",
+            "Split peas",
+            "Collard greens",
+            "Beetroot",
+            "Salad",
+            "Injera"
+          ],
+          "ingredientsAm": [
+            "ምስር",
+            "ክትፎብር",
+            "ጎመን",
+            "ቅቤ ሰርጎት",
+            "ሳላጣ",
+            "እንጀራ"
+          ]
         },
         {
           "id": "i-06",
@@ -92,7 +180,21 @@
           "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Taita%20and%20shiro.jpg?width=420",
           "available": true,
           "spicy": false,
-          "sortOrder": 6
+          "sortOrder": 6,
+          "ingredientsEn": [
+            "Chickpea stew (shiro)",
+            "Torn injera",
+            "Garlic",
+            "Berbere",
+            "Niter kibbeh"
+          ],
+          "ingredientsAm": [
+            "የሽምብራ ወጥ (ሽሮ)",
+            "የተቆረጠ እንጀራ",
+            "ጉልበት",
+            "በርበሬ",
+            "ንጥር ቅቤ"
+          ]
         },
         {
           "id": "i-07",
@@ -105,7 +207,27 @@
           "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cheeseburger.jpg?width=420",
           "available": true,
           "spicy": false,
-          "sortOrder": 7
+          "sortOrder": 7,
+          "ingredientsEn": [
+            "Beef patty",
+            "Burger bun",
+            "Cheddar cheese",
+            "Lettuce",
+            "Tomato",
+            "Potatoes",
+            "Ketchup",
+            "Salt and pepper"
+          ],
+          "ingredientsAm": [
+            "የበሬ ሥጋ ካትኪ",
+            "የበርገር እንጀራ",
+            "ቻድር ቅቤ",
+            "ሳላጣ",
+            "ቲማቲም",
+            "ድንች",
+            "ካትሑፕ",
+            "ጨዋታና ቀይ በርበሬ"
+          ]
         },
         {
           "id": "c4dde17d576e",
@@ -118,7 +240,25 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Samosa_cross_section%2C_Tokyo_Japan.jpg/500px-Samosa_cross_section%2C_Tokyo_Japan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": true,
-          "sortOrder": 7
+          "sortOrder": 7,
+          "ingredientsEn": [
+            "Flour pastry",
+            "Beef",
+            "Onion",
+            "Garlic",
+            "Cumin",
+            "Coriander",
+            "Cooking oil"
+          ],
+          "ingredientsAm": [
+            "የአስተ ሥጋ ሊጡ",
+            "በሬ ሥጋ",
+            "ሽንኩርት",
+            "ጉልበት",
+            "እሙዝ",
+            "ኮርዮንደር",
+            "የቅቤ ዘይት"
+          ]
         },
         {
           "id": "199af32f1f98",
@@ -131,7 +271,23 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Person_Enjoys_Tibs.JPG/500px-Person_Enjoys_Tibs.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": true,
-          "sortOrder": 8
+          "sortOrder": 8,
+          "ingredientsEn": [
+            "Beef sirloin",
+            "Onion",
+            "Rosemary",
+            "Red pepper",
+            "Butter",
+            "Salt"
+          ],
+          "ingredientsAm": [
+            "የበሬ ሥጋ ጥራ",
+            "ሽንኩርት",
+            "ሮዝመሪ",
+            "ቀይ በርበሬ",
+            "ቅባ",
+            "ጨዋታ"
+          ]
         },
         {
           "id": "e06b0d089524",
@@ -144,7 +300,25 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Alicha_1.jpg/500px-Alicha_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": false,
-          "sortOrder": 9
+          "sortOrder": 9,
+          "ingredientsEn": [
+            "Split peas",
+            "Turmeric",
+            "Garlic",
+            "Ginger",
+            "Onion",
+            "Niter kibbeh",
+            "Injera"
+          ],
+          "ingredientsAm": [
+            "ክትፎብር",
+            "ለብር",
+            "ጉልበት",
+            "ዘር",
+            "ሽንኩርት",
+            "ንጥር ቅቤ",
+            "እንጀራ"
+          ]
         },
         {
           "id": "8ac354e2f0c2",
@@ -157,7 +331,23 @@
           "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Yams%2C%20black-eyed%20peas%2C%20collard%20greens%20(6213122509).jpg?width=420",
           "available": true,
           "spicy": false,
-          "sortOrder": 10
+          "sortOrder": 10,
+          "ingredientsEn": [
+            "Collard greens",
+            "Garlic",
+            "Onion",
+            "Herbs",
+            "Niter kibbeh",
+            "Injera"
+          ],
+          "ingredientsAm": [
+            "ጎመን",
+            "ጉልበት",
+            "ሽንኩርት",
+            "ቅጠል",
+            "ንጥር ቅቤ",
+            "እንጀራ"
+          ]
         },
         {
           "id": "0c1189a34bc6",
@@ -170,7 +360,25 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Romaine_lettuce.jpg/500px-Romaine_lettuce.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": false,
-          "sortOrder": 11
+          "sortOrder": 11,
+          "ingredientsEn": [
+            "Lettuce",
+            "Tomato",
+            "Cucumber",
+            "Onion",
+            "Olive oil",
+            "Lemon",
+            "Salt"
+          ],
+          "ingredientsAm": [
+            "ሳላጣ",
+            "ቲማቲም",
+            "አቆሪ",
+            "ሽንኩርት",
+            "የርስስ ዘይት",
+            "ሎሚ",
+            "ጨዋታ"
+          ]
         },
         {
           "id": "8610c9f1e94e",
@@ -183,7 +391,25 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Fried-Chicken-Set.jpg/500px-Fried-Chicken-Set.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": false,
-          "sortOrder": 12
+          "sortOrder": 12,
+          "ingredientsEn": [
+            "Chicken",
+            "Flour",
+            "Egg",
+            "Spices",
+            "Potatoes",
+            "Salt",
+            "Cooking oil"
+          ],
+          "ingredientsAm": [
+            "ዶሮ",
+            "ዱቂቆ",
+            "እንቁላል",
+            "ቅመማቶች",
+            "ድንች",
+            "ጨዋታ",
+            "የቅቤ ዘይት"
+          ]
         },
         {
           "id": "b93485aa9133",
@@ -196,7 +422,25 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Spaghetti_Bolognese.jpg/500px-Spaghetti_Bolognese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": false,
-          "sortOrder": 13
+          "sortOrder": 13,
+          "ingredientsEn": [
+            "Spaghetti",
+            "Ground beef",
+            "Tomato",
+            "Onion",
+            "Garlic",
+            "Olive oil",
+            "Herbs"
+          ],
+          "ingredientsAm": [
+            "ስፔጫጊ",
+            "የተቀቀመ በሬ ሥጋ",
+            "ቲማቲም",
+            "ሽንኩርት",
+            "ጉልበት",
+            "የርስስ ዘይት",
+            "ቅጠል"
+          ]
         },
         {
           "id": "0fc8ff1b32c2",
@@ -209,7 +453,25 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Japanese_style_chicken_curry_with_rice_of_Nakau.JPG/500px-Japanese_style_chicken_curry_with_rice_of_Nakau.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": true,
-          "sortOrder": 14
+          "sortOrder": 14,
+          "ingredientsEn": [
+            "Rice",
+            "Chicken",
+            "Onion",
+            "Tomato",
+            "Curry powder",
+            "Cooking oil",
+            "Salt"
+          ],
+          "ingredientsAm": [
+            "ሩዝ",
+            "ዶሮ",
+            "ሽንኩርት",
+            "ቲማቲም",
+            "ካሪ ዱኒያ",
+            "የቅቤ ዘይት",
+            "ጨዋታ"
+          ]
         },
         {
           "id": "1654c5da209b",
@@ -222,7 +484,23 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg/500px-Eq_it-na_pizza-margherita_sep2005_sml.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": false,
-          "sortOrder": 15
+          "sortOrder": 15,
+          "ingredientsEn": [
+            "Pizza dough",
+            "Tomato sauce",
+            "Mozzarella",
+            "Basil",
+            "Olive oil",
+            "Salt"
+          ],
+          "ingredientsAm": [
+            "የፒዛ ሊጡ",
+            "የቲማቲም ሶስ",
+            "ሞዝየሪላ",
+            "ባዝል",
+            "የርስስ ዘይት",
+            "ጨዋታ"
+          ]
         },
         {
           "id": "6c71d490ce89",
@@ -235,7 +513,23 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Katzs_deli_corned_beef.jpg/500px-Katzs_deli_corned_beef.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": false,
-          "sortOrder": 16
+          "sortOrder": 16,
+          "ingredientsEn": [
+            "Bread",
+            "Roast beef",
+            "Lettuce",
+            "Tomato",
+            "House sauce",
+            "Salt"
+          ],
+          "ingredientsAm": [
+            "እንጀራ",
+            "የተጠበሰ በሬ ሥጋ",
+            "ሳላጣ",
+            "ቲማቲም",
+            "የቤት ስልጤስ",
+            "ጨዋታ"
+          ]
         },
         {
           "id": "632f74bfc24c",
@@ -248,7 +542,19 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Truffle_oil_french_fries_%2833024792848%29.jpg/500px-Truffle_oil_french_fries_%2833024792848%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": false,
-          "sortOrder": 17
+          "sortOrder": 17,
+          "ingredientsEn": [
+            "Potatoes",
+            "Cooking oil",
+            "Salt",
+            "Ketchup"
+          ],
+          "ingredientsAm": [
+            "ድንች",
+            "የቅቤ ዘይት",
+            "ጨዋታ",
+            "ካትሑፕ"
+          ]
         }
       ]
     },
@@ -269,7 +575,21 @@
           "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Coffee%20ceremony%20of%20Ethiopia%20and%20Eritrea%201.jpg?width=420",
           "available": true,
           "spicy": false,
-          "sortOrder": 1
+          "sortOrder": 1,
+          "ingredientsEn": [
+            "Harari coffee beans",
+            "Water",
+            "Pan",
+            "Grass",
+            "Roasted butter"
+          ],
+          "ingredientsAm": [
+            "የሐረሪ ቡና ቅርፍ",
+            "ውሃ",
+            "ስክይል",
+            "ሳር",
+            "የተጠበሰ ቅባ"
+          ]
         },
         {
           "id": "i-09",
@@ -282,7 +602,19 @@
           "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Latte%20macchiato%20with%20coffee%20beans.jpg?width=420",
           "available": true,
           "spicy": false,
-          "sortOrder": 2
+          "sortOrder": 2,
+          "ingredientsEn": [
+            "Espresso",
+            "Steamed milk",
+            "Milk foam",
+            "Cocoa powder"
+          ],
+          "ingredientsAm": [
+            "እስፕሬሶ",
+            "የተጠበሰ ወተት",
+            "የወተት አረፋ",
+            "የካኮዎ እንብረት"
+          ]
         },
         {
           "id": "i-10",
@@ -295,7 +627,19 @@
           "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cappuccino%208.jpg?width=420",
           "available": true,
           "spicy": false,
-          "sortOrder": 3
+          "sortOrder": 3,
+          "ingredientsEn": [
+            "Espresso",
+            "Steamed milk",
+            "Milk foam",
+            "Cocoa powder"
+          ],
+          "ingredientsAm": [
+            "እስፕሬሶ",
+            "የተጠበሰ ወተት",
+            "የወተት አረፋ",
+            "የካኮዎ እንብረት"
+          ]
         },
         {
           "id": "a5f34fa7f148",
@@ -308,7 +652,17 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Caff%C3%A8_latte_as_being_served_at_Kaffebrenneriet_Torshov%2C_Oslo%2C_Norway_2_600x600_100KB.jpg/500px-Caff%C3%A8_latte_as_being_served_at_Kaffebrenneriet_Torshov%2C_Oslo%2C_Norway_2_600x600_100KB.jpg?utm_source=commons.wikimedia.org&utm_camp",
           "available": true,
           "spicy": false,
-          "sortOrder": 4
+          "sortOrder": 4,
+          "ingredientsEn": [
+            "Espresso",
+            "Steamed milk",
+            "Milk foam"
+          ],
+          "ingredientsAm": [
+            "እስፕሬሶ",
+            "የተጠበሰ ወተት",
+            "የወተት አረፋ"
+          ]
         },
         {
           "id": "i-11",
@@ -321,7 +675,25 @@
           "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2019%20Jan%2016%20-%20Kumbh%20Mela%20-%20Chai.jpg?width=420",
           "available": true,
           "spicy": false,
-          "sortOrder": 4
+          "sortOrder": 4,
+          "ingredientsEn": [
+            "Black tea",
+            "Cinnamon",
+            "Cardamom",
+            "Clove",
+            "Ginger",
+            "Sugar",
+            "Water"
+          ],
+          "ingredientsAm": [
+            "ጥኩር ሻይ",
+            "ቀይ ያለሰከርም",
+            "ካርዶሞም",
+            "ሚክላ",
+            "ዘር",
+            "ስኳር",
+            "ውሃ"
+          ]
         },
         {
           "id": "2b890269543b",
@@ -334,7 +706,15 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Espresso_BW_1.jpg/500px-Espresso_BW_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": false,
-          "sortOrder": 5
+          "sortOrder": 5,
+          "ingredientsEn": [
+            "Ground coffee",
+            "Hot water"
+          ],
+          "ingredientsAm": [
+            "የተቀቀመ ቡና",
+            "ሞቅ ውሃ"
+          ]
         },
         {
           "id": "ec112c918828",
@@ -347,7 +727,19 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Iced_Coffee_%286088101587%29.jpg/500px-Iced_Coffee_%286088101587%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": false,
-          "sortOrder": 6
+          "sortOrder": 6,
+          "ingredientsEn": [
+            "Brewed coffee",
+            "Ice",
+            "Water",
+            "Sugar or milk"
+          ],
+          "ingredientsAm": [
+            "የተጠበሰ ቡና",
+            "በረዶ",
+            "ውሃ",
+            "ስኳር ወይም ወተት"
+          ]
         },
         {
           "id": "c28f8c9ee9cc",
@@ -360,7 +752,17 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Black-tea.jpg/500px-Black-tea.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": false,
-          "sortOrder": 7
+          "sortOrder": 7,
+          "ingredientsEn": [
+            "Black tea leaves",
+            "Water",
+            "Sugar"
+          ],
+          "ingredientsAm": [
+            "የጥኩር ሻይ ቅጠል",
+            "ውሃ",
+            "ስኳር"
+          ]
         }
       ]
     },
@@ -381,7 +783,21 @@
           "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Avocado%20lamaw%20(Avocado%20in%20milk%20and%20sugar%2C%20chilled%20or%20with%20ice)%2C%20Philippines%2004.jpg?width=420",
           "available": true,
           "spicy": false,
-          "sortOrder": 1
+          "sortOrder": 1,
+          "ingredientsEn": [
+            "Avocado",
+            "Milk",
+            "Sugar",
+            "Ice",
+            "Lime"
+          ],
+          "ingredientsAm": [
+            "አቮካዶ",
+            "ወተት",
+            "ስኳር",
+            "በረዶ",
+            "ሎሚ"
+          ]
         },
         {
           "id": "i-13",
@@ -394,7 +810,21 @@
           "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mangos%20-%20single%20and%20halved.jpg?width=420",
           "available": true,
           "spicy": false,
-          "sortOrder": 2
+          "sortOrder": 2,
+          "ingredientsEn": [
+            "Mango",
+            "Sugar",
+            "Ice",
+            "Water",
+            "Lemon"
+          ],
+          "ingredientsAm": [
+            "ማንጎ",
+            "ስኳር",
+            "በረዶ",
+            "ውሃ",
+            "ሎሚ"
+          ]
         },
         {
           "id": "i-14",
@@ -407,7 +837,23 @@
           "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Orange%20juice%201%20edit1.jpg?width=420",
           "available": true,
           "spicy": false,
-          "sortOrder": 3
+          "sortOrder": 3,
+          "ingredientsEn": [
+            "Seasonal fruits",
+            "Orange",
+            "Apple",
+            "Carrot",
+            "Ginger",
+            "Ice"
+          ],
+          "ingredientsAm": [
+            "የወቅቱ ፍራፍሬ",
+            "ትሮፖ",
+            "ፖም",
+            "ካሮት",
+            "ዘር",
+            "በረዶ"
+          ]
         },
         {
           "id": "i-15",
@@ -420,7 +866,21 @@
           "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lemonade%202.jpg?width=420",
           "available": true,
           "spicy": false,
-          "sortOrder": 4
+          "sortOrder": 4,
+          "ingredientsEn": [
+            "Lemon",
+            "Sugar",
+            "Water",
+            "Ice",
+            "Mint"
+          ],
+          "ingredientsAm": [
+            "ሎሚ",
+            "ስኳር",
+            "ውሃ",
+            "በረዶ",
+            "ንጥሩጥር"
+          ]
         },
         {
           "id": "66abc60d4808",
@@ -433,7 +893,21 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Zumo_de_Papaya-2009.jpg/500px-Zumo_de_Papaya-2009.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": false,
-          "sortOrder": 4
+          "sortOrder": 4,
+          "ingredientsEn": [
+            "Papaya",
+            "Sugar",
+            "Water",
+            "Ice",
+            "Lemon"
+          ],
+          "ingredientsAm": [
+            "ፓፓያ",
+            "ስኳር",
+            "ውሃ",
+            "በረዶ",
+            "ሎሚ"
+          ]
         },
         {
           "id": "6524ce750fe6",
@@ -446,7 +920,21 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Pineapple_Juice.jpg/500px-Pineapple_Juice.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": false,
-          "sortOrder": 5
+          "sortOrder": 5,
+          "ingredientsEn": [
+            "Pineapple",
+            "Sugar",
+            "Water",
+            "Ice",
+            "Mint"
+          ],
+          "ingredientsAm": [
+            "አናናስ",
+            "ስኳር",
+            "ውሃ",
+            "በረዶ",
+            "ንጥሩጥር"
+          ]
         },
         {
           "id": "c50ad8016cb6",
@@ -459,7 +947,21 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Guava_ID.jpg/500px-Guava_ID.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": false,
-          "sortOrder": 6
+          "sortOrder": 6,
+          "ingredientsEn": [
+            "Guava",
+            "Sugar",
+            "Water",
+            "Ice",
+            "Lemon"
+          ],
+          "ingredientsAm": [
+            "ጉልት",
+            "ስኳር",
+            "ውሃ",
+            "በረዶ",
+            "ሎሚ"
+          ]
         },
         {
           "id": "47cf85aed801",
@@ -472,7 +974,21 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Banana_and_strawberry_smoothie.jpg/500px-Banana_and_strawberry_smoothie.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": false,
-          "sortOrder": 7
+          "sortOrder": 7,
+          "ingredientsEn": [
+            "Banana",
+            "Milk",
+            "Honey",
+            "Ice",
+            "Cinnamon"
+          ],
+          "ingredientsAm": [
+            "በተን",
+            "ወተት",
+            "ማር",
+            "በረዶ",
+            "ቀይ ያለሰከርም"
+          ]
         },
         {
           "id": "f8d0b126a6c4",
@@ -485,7 +1001,21 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Tow_Glass_of_Watermelon_Juice.jpg/500px-Tow_Glass_of_Watermelon_Juice.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": false,
-          "sortOrder": 8
+          "sortOrder": 8,
+          "ingredientsEn": [
+            "Watermelon",
+            "Lime",
+            "Ice",
+            "Mint",
+            "Salt"
+          ],
+          "ingredientsAm": [
+            "ሲኳዝ",
+            "ሎሚ",
+            "በረዶ",
+            "ንጥሩጥር",
+            "ጨዋታ"
+          ]
         }
       ]
     },
@@ -506,7 +1036,19 @@
           "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Beer%20wuerzburger%20hofbraue%20v.jpg?width=420",
           "available": true,
           "spicy": false,
-          "sortOrder": 1
+          "sortOrder": 1,
+          "ingredientsEn": [
+            "Barley malt",
+            "Hops",
+            "Water",
+            "Yeast"
+          ],
+          "ingredientsAm": [
+            "የገብ ማልት",
+            "ሆፕስ",
+            "ውሃ",
+            "ኸምብ"
+          ]
         },
         {
           "id": "i-17",
@@ -519,7 +1061,19 @@
           "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Von%20Trapp%20beer%20glass%20with%20beer%202021%20001.jpg?width=420",
           "available": true,
           "spicy": false,
-          "sortOrder": 2
+          "sortOrder": 2,
+          "ingredientsEn": [
+            "Barley malt",
+            "Hops",
+            "Water",
+            "Yeast"
+          ],
+          "ingredientsAm": [
+            "የገብ ማልት",
+            "ሆፕስ",
+            "ውሃ",
+            "ኸምብ"
+          ]
         },
         {
           "id": "i-18",
@@ -532,7 +1086,21 @@
           "image": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20glass%20of%20Ethiopian%20mead%20(tej).jpg?width=420",
           "available": true,
           "spicy": false,
-          "sortOrder": 3
+          "sortOrder": 3,
+          "ingredientsEn": [
+            "Honey",
+            "Water",
+            "Gesho leaves",
+            "Spices",
+            "Sunlight"
+          ],
+          "ingredientsAm": [
+            "ማር",
+            "ውሃ",
+            "ጌሾ ቅጠል",
+            "ቅመማቶች",
+            "የፀዓት ብርሃን"
+          ]
         },
         {
           "id": "i-19",
@@ -545,7 +1113,19 @@
           "image": "https://commons.wikimedia.org/wiki/Special:FilePath/White%20Wine%20Glas.jpg?width=420",
           "available": true,
           "spicy": false,
-          "sortOrder": 4
+          "sortOrder": 4,
+          "ingredientsEn": [
+            "White grape juice",
+            "Water",
+            "Yeast",
+            "Sulphites"
+          ],
+          "ingredientsAm": [
+            "የነጭ ወይን ጭማቂ",
+            "ውሃ",
+            "ኸምብ",
+            "ሰልፋይት"
+          ]
         },
         {
           "id": "i-20",
@@ -558,7 +1138,19 @@
           "image": "https://commons.wikimedia.org/wiki/Special:FilePath/15-09-26-RalfR-WLC-0098%20-%20Coca-Cola%20glass%20bottle%20(Germany).jpg?width=420",
           "available": true,
           "spicy": false,
-          "sortOrder": 5
+          "sortOrder": 5,
+          "ingredientsEn": [
+            "Carbonated water",
+            "Sugar or sweetener",
+            "Flavouring",
+            "Caffeine"
+          ],
+          "ingredientsAm": [
+            "ጨማቅ ውሃ",
+            "ስኳር",
+            "ጣዕም",
+            "ካፌን"
+          ]
         },
         {
           "id": "i-21",
@@ -571,7 +1163,17 @@
           "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Photo%20of%20canned%20spring%20water.%2016%20oz%20reclosable%20aluminum%20bottle.jpg?width=420",
           "available": true,
           "spicy": false,
-          "sortOrder": 6
+          "sortOrder": 6,
+          "ingredientsEn": [
+            "Still or sparkling water",
+            "Minerals",
+            "Carbon dioxide"
+          ],
+          "ingredientsAm": [
+            "የሰላም ውሃ",
+            "የሚኒራል ጽሕፈት",
+            "ካርቦን ዳይኦክሳይድ"
+          ]
         },
         {
           "id": "4e1b77499a39",
@@ -584,7 +1186,21 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Pouring_red_wine_into_a_glass.jpg/500px-Pouring_red_wine_into_a_glass.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": false,
-          "sortOrder": 6
+          "sortOrder": 6,
+          "ingredientsEn": [
+            "Red grape juice",
+            "Water",
+            "Yeast",
+            "Oak ageing",
+            "Sulphites"
+          ],
+          "ingredientsAm": [
+            "የቀይ ወይን ጭማቂ",
+            "ውሃ",
+            "ኸምብ",
+            "የክፍቢ ጊዜ",
+            "ሰልፋይት"
+          ]
         },
         {
           "id": "2b4bac158089",
@@ -597,7 +1213,21 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Gin_and_tonic_with_lime.jpg/500px-Gin_and_tonic_with_lime.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": false,
-          "sortOrder": 7
+          "sortOrder": 7,
+          "ingredientsEn": [
+            "Gin",
+            "Tonic water",
+            "Ice",
+            "Lime",
+            "Quinine"
+          ],
+          "ingredientsAm": [
+            "ጂን",
+            "ቶኒክ ውሃ",
+            "በረዶ",
+            "ሎሚ",
+            "ኩኒን"
+          ]
         },
         {
           "id": "23fa9e4d3d20",
@@ -610,7 +1240,21 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Headshot_energy_drink_365ml_200mg_cafeine_and_L_Tyrosine.jpg/500px-Headshot_energy_drink_365ml_200mg_cafeine_and_L_Tyrosine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": false,
-          "sortOrder": 8
+          "sortOrder": 8,
+          "ingredientsEn": [
+            "Taurine",
+            "Caffeine",
+            "Sugar",
+            "B vitamins",
+            "Carbonated water"
+          ],
+          "ingredientsAm": [
+            "ታውሪን",
+            "ካፌን",
+            "ስኳር",
+            "የቪ ቫማኒኖች",
+            "ጨማቅ ውሃ"
+          ]
         },
         {
           "id": "b5e39fa5ad7b",
@@ -623,7 +1267,17 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Bowl_milk_glass.jpg/500px-Bowl_milk_glass.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": false,
-          "sortOrder": 9
+          "sortOrder": 9,
+          "ingredientsEn": [
+            "Fresh cow milk",
+            "Water",
+            "Starter culture"
+          ],
+          "ingredientsAm": [
+            "አዲስ የላም ወተት",
+            "ውሃ",
+            "ስቀመጥ"
+          ]
         }
       ]
     },
@@ -644,7 +1298,25 @@
           "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethiopian%20cuisine%20fusion.jpg?width=420",
           "available": true,
           "spicy": true,
-          "sortOrder": 1
+          "sortOrder": 1,
+          "ingredientsEn": [
+            "Mutinjera",
+            "Kitfo",
+            "Doro wot",
+            "Vegetarian stews",
+            "Injera",
+            "Coffee",
+            "Harari sweets"
+          ],
+          "ingredientsAm": [
+            "ሙጥንጀራ",
+            "ክትፎ",
+            "ዶሮ ወጥ",
+            "የአትክልት ወጦች",
+            "እንጀራ",
+            "ቡና",
+            "የሐረሪ ጣፋጮች"
+          ]
         },
         {
           "id": "i-23",
@@ -657,7 +1329,23 @@
           "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Injera%20and%20doro%20wat%20-%2049337093131.jpg?width=420",
           "available": true,
           "spicy": true,
-          "sortOrder": 2
+          "sortOrder": 2,
+          "ingredientsEn": [
+            "Mixed meat wot",
+            "Kitfo",
+            "Vegetarian combo",
+            "Injera",
+            "Salad",
+            "Coffee or tea"
+          ],
+          "ingredientsAm": [
+            "የተዋላየ ሥጋ ወጥ",
+            "ክትፎ",
+            "አታክልት እርቃኝ",
+            "እንጀራ",
+            "ሳላጣ",
+            "ቡና ወይም ሻይ"
+          ]
         },
         {
           "id": "i-24",
@@ -670,7 +1358,13 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Ethiopian_food.jpg/500px-Ethiopian_food.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": false,
-          "sortOrder": 3
+          "sortOrder": 3,
+          "ingredientsEn": [
+            "Ask your server for today's ingredients"
+          ],
+          "ingredientsAm": [
+            "የዛሬውን ግብዎች ከሰራተኛዎ ይጠይቁ"
+          ]
         }
       ]
     },
@@ -691,7 +1385,19 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Salad_platter.jpg/500px-Salad_platter.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": false,
-          "sortOrder": 0
+          "sortOrder": 0,
+          "ingredientsEn": [
+            "Seasonal fruits",
+            "Lemon",
+            "Mint",
+            "Honey drizzle"
+          ],
+          "ingredientsAm": [
+            "የወቅቱ ፍራፍሬ",
+            "ሎሚ",
+            "ንጥሩጥር",
+            "ማር"
+          ]
         },
         {
           "id": "3450782a7cdc",
@@ -704,7 +1410,23 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/GermanChocolateCake.jpg/500px-GermanChocolateCake.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": false,
-          "sortOrder": 1
+          "sortOrder": 1,
+          "ingredientsEn": [
+            "Cocoa powder",
+            "Flour",
+            "Sugar",
+            "Eggs",
+            "Butter",
+            "Cream"
+          ],
+          "ingredientsAm": [
+            "የካካዎ እንብረት",
+            "ዱቂቆ",
+            "ስኳር",
+            "እንቁላል",
+            "ቅባ",
+            "ክሪም"
+          ]
         },
         {
           "id": "7a00c381b634",
@@ -717,7 +1439,21 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Ice_Cream_dessert_02.jpg/500px-Ice_Cream_dessert_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": false,
-          "sortOrder": 2
+          "sortOrder": 2,
+          "ingredientsEn": [
+            "Milk",
+            "Cream",
+            "Sugar",
+            "Vanilla or mango",
+            "Ice"
+          ],
+          "ingredientsAm": [
+            "ወተት",
+            "ክሪም",
+            "ስኳር",
+            "ባኒላ ወይም ማንጎ",
+            "በረዶ"
+          ]
         },
         {
           "id": "af1df460ea6b",
@@ -730,7 +1466,17 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Popcorn%2C_Indiana.jpg/500px-Popcorn%2C_Indiana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": false,
-          "sortOrder": 3
+          "sortOrder": 3,
+          "ingredientsEn": [
+            "Maize kernels",
+            "Butter or oil",
+            "Salt"
+          ],
+          "ingredientsAm": [
+            "የበቆሎ እንቁላል",
+            "ቅባ ወይም ዘይት",
+            "ጨዋታ"
+          ]
         },
         {
           "id": "f13a4e4dc6b5",
@@ -743,10 +1489,22 @@
           "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Banana_bread_preparation_in_a_Dorze_village.jpg/500px-Banana_bread_preparation_in_a_Dorze_village.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
           "available": true,
           "spicy": false,
-          "sortOrder": 4
+          "sortOrder": 4,
+          "ingredientsEn": [
+            "Teff flour",
+            "Water",
+            "Butter",
+            "Honey"
+          ],
+          "ingredientsAm": [
+            "የጤፍ ዱቂቆ",
+            "ውሃ",
+            "ቅባ",
+            "ማር"
+          ]
         }
       ]
     }
   ],
-  "generatedAt": "2026-09-28T13:41:36.028Z"
+  "generatedAt": "2026-09-29T13:45:55.527Z"
 }

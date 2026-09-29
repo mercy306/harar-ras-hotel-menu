@@ -32,6 +32,8 @@ export interface MenuItem {
   image: string | null
   available: boolean
   spicy: boolean
+  ingredientsEn?: string[]
+  ingredientsAm?: string[]
 }
 
 export interface PublicCategory extends Category {
