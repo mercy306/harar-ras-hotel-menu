@@ -426,6 +426,48 @@ function HomePage({
               ))}
             </nav>
 
+            <div className="guide">
+              <div className="guide__title">{lang === 'am' ? 'መመሪያ' : 'How to use this menu'}</div>
+              <ol className="guide__list">
+                <li className="guide__item">
+                  <span className="guide__num">1</span>
+                  <span className="guide__text">
+                    {lang === 'am'
+                      ? 'ቋንቋዎን ይምረጡ — English ወይም አማርኛ'
+                      : 'Choose your language — English or አማርኛ'}
+                  </span>
+                </li>
+                <li className="guide__item">
+                  <span className="guide__num">2</span>
+                  <span className="guide__text">
+                    {lang === 'am'
+                      ? 'ከታች ያለውን ክፍል ይጫኑ — ምግብ፣ መጠጦች ወይም ልዩ ምናሌ'
+                      : 'Tap a section below — Food, Drinks or Specials'}
+                  </span>
+                </li>
+                <li className="guide__item">
+                  <span className="guide__num">3</span>
+                  <span className="guide__text">
+                    {lang === 'am'
+                      ? 'ምግቡን ይጫኑ — ፎቶው፣ ዋጋውና ግብዎች ይታያሉ'
+                      : 'Tap any dish to see its photo, price and ingredients'}
+                  </span>
+                </li>
+                <li className="guide__item">
+                  <span className="guide__num">4</span>
+                  <span className="guide__text">
+                    {lang === 'am'
+                      ? table !== null
+                        ? `ለማዘዝ ወደ ሰራተኛዎ ይንገሩ — ለጠረጴዛ ${table}`
+                        : 'ለማዘዝ የጠረጴዛዎን ቁጥር ከሰራተኛዎ ጠይቀው'
+                      : table !== null
+                        ? `To order, tell your server — for table ${table}`
+                        : 'To order, tell your server your table number'}
+                  </span>
+                </li>
+              </ol>
+            </div>
+
             {strip.length > 0 && (
               <div className="cover__strip">
                 {strip.map((item) =>
