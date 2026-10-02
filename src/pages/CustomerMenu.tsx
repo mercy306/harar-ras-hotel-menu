@@ -10,10 +10,6 @@ export default function CustomerMenu() {
   const [error, setError] = useState<string | null>(null)
   const [catId, setCatId] = useState<string | null>(() => new URLSearchParams(window.location.search).get('cat'))
   const [itemId, setItemId] = useState<string | null>(() => new URLSearchParams(window.location.search).get('item'))
-  const [table] = useState(() => {
-    const value = Number(new URLSearchParams(window.location.search).get('table'))
-    return Number.isInteger(value) && value > 0 ? value : null
-  })
   const [viewer, setViewer] = useState<{ items: MenuItem[]; index: number } | null>(null)
 
   useEffect(() => {
@@ -146,7 +142,6 @@ export default function CustomerMenu() {
       menu={menu}
       lang={lang}
       setLang={setLang}
-      table={table}
       itemId={itemId}
       backCategory={activeCat}
       onBack={closeItem}
@@ -159,7 +154,6 @@ export default function CustomerMenu() {
       lang={lang}
       setLang={setLang}
       category={activeCat}
-      table={table}
       onBack={closeAll}
       onOpen={openItem}
       onSwitchCat={openCategory}
@@ -170,7 +164,6 @@ export default function CustomerMenu() {
       menu={menu}
       lang={lang}
       setLang={setLang}
-      table={table}
       onOpen={openItem}
       onOpenCat={openCategory}
     />
@@ -346,14 +339,12 @@ function HomePage({
   menu,
   lang,
   setLang,
-  table,
   onOpen,
   onOpenCat,
 }: {
   menu: PublicMenu
   lang: Lang
   setLang: (l: Lang) => void
-  table: number | null
   onOpen: (id: string) => void
   onOpenCat: (id: string) => void
 }) {
@@ -457,12 +448,8 @@ function HomePage({
                   <span className="guide__num">4</span>
                   <span className="guide__text">
                     {lang === 'am'
-                      ? table !== null
-                        ? `ለማዘዝ ወደ ሰራተኛዎ ይንገሩ — ለጠረጴዛ ${table}`
-                        : 'ለማዘዝ የጠረጴዛዎን ቁጥር ከሰራተኛዎ ጠይቀው'
-                      : table !== null
-                        ? `To order, tell your server — for table ${table}`
-                        : 'To order, tell your server your table number'}
+                      ? 'ለማዘዝ የሚፈልጉበትን ምግብ ወይም መጠጥ ወደ ሰራተኛዎ ይንገሩ'
+                      : 'To order, tell your server the dish or drink you want'}
                   </span>
                 </li>
               </ol>
@@ -506,11 +493,6 @@ function HomePage({
 
             <div className="poster__meta">
               <LangToggle lang={lang} setLang={setLang} />
-              {table !== null && (
-                <span className="hero__table poster__table">
-                  {t(`Table ${table}`, `ጠረጴዛ ${table}`)}
-                </span>
-              )}
             </div>
           </aside>
         </div>
@@ -540,7 +522,6 @@ function CategoryPage({
   lang,
   setLang,
   category,
-  table,
   onBack,
   onOpen,
   onSwitchCat,
@@ -550,7 +531,6 @@ function CategoryPage({
   lang: Lang
   setLang: (l: Lang) => void
   category: PublicCategory
-  table: number | null
   onBack: () => void
   onOpen: (id: string) => void
   onSwitchCat: (id: string) => void
@@ -581,9 +561,6 @@ function CategoryPage({
             <span className="cat-hero__count">
               {category.items.length} {t('items', 'እቃዎች')}
             </span>
-            {table !== null && (
-              <span className="hero__table detail__table">{t(`Table ${table}`, `ጠረጴዛ ${table}`)}</span>
-            )}
           </div>
         </div>
 
@@ -635,7 +612,6 @@ function ItemPage({
   menu,
   lang,
   setLang,
-  table,
   itemId,
   backCategory,
   onBack,
@@ -645,7 +621,6 @@ function ItemPage({
   menu: PublicMenu
   lang: Lang
   setLang: (l: Lang) => void
-  table: number | null
   itemId: string
   backCategory: PublicCategory | null
   onBack: () => void
@@ -717,9 +692,6 @@ function ItemPage({
         <div className="detail__content">
           <div className="detail__kicker">
             <span className="chip-inline">{category.emoji}</span> {catLabel(category, lang)}
-            {table !== null && (
-              <span className="hero__table detail__table">{t(`Table ${table}`, `ጠረጴዛ ${table}`)}</span>
-            )}
           </div>
 
           <h1 className="detail__name">{name}</h1>
@@ -750,8 +722,8 @@ function ItemPage({
             <div className="detail__order-title">{lang === 'am' ? '📣 ለማዘዝ' : '📣 To order'}</div>
             <p>
               {lang === 'am'
-                ? `ለሰራተኛዎ ይንገሩ፦ «${item.nameAm || item.nameEn}»${table ? ` ለጠረጴዛ ${table}` : ''}`
-                : `Tell your server — "${item.nameEn}"${table ? ` for table ${table}` : ''}.`}
+                ? `ለሰራተኛዎ ይንገሩ፦ «${item.nameAm || item.nameEn}»`
+                : `Tell your server — "${item.nameEn}".`}
             </p>
           </div>
 
