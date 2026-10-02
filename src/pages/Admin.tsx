@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react'
-import QRCode from 'qrcode'
 import { api, clearToken, formatPrice, getToken, setToken } from '../api'
 import type { AdminCategory, AdminData, AdminHotel, MenuItem } from '../types'
 
-type Tab = 'menu' | 'hotel' | 'tables'
+type Tab = 'menu' | 'hotel'
 
 const EMOJIS = ['🍛', '☕', '🍹', '🍺', '🎉', '🍽️', '🥗', '🍗', '🥩', '🍕', '🍔', '🥑', '🍜', '🍰', '🍵', '🥤', '🍾', '🍮']
 
@@ -142,9 +141,6 @@ return (
             <button className={tab === 'hotel' ? 'is-active' : ''} onClick={() => setTab('hotel')} type="button">
               Hotel
             </button>
-            <button className={tab === 'tables' ? 'is-active' : ''} onClick={() => setTab('tables')} type="button">
-              QR Tables
-            </button>
           </nav>
           <div className="admin__actions">
             <a className="btn btn--ghost btn--sm" href="/">
@@ -171,7 +167,6 @@ return (
           />
         )}
         {tab === 'hotel' && <HotelTab hotel={data.hotel} busy={busy} onSaved={() => refresh(true)} flash={flash} />}
-        {tab === 'tables' && <TablesTab hotel={data.hotel} />}
       </main>
     </div>
   )
@@ -747,24 +742,14 @@ function HotelTab({ hotel, busy, onSaved, flash }: { hotel: AdminHotel; busy: bo
       </div>
 
       <div className="panel">
-        <h2>Public menu & tables</h2>
+        <h2>Public menu link</h2>
         <div className="form-grid">
           <label className="wide">
-            Public URL (used for QR codes — the address customers use to open this app)
+            Public URL — the address guests open to see this menu
             <input value={draft.publicUrl} onChange={(e) => set({ publicUrl: e.target.value })} placeholder="https://menu.myhotel.com" />
           </label>
-          <label>
-            Number of tables
-            <input
-              type="number"
-              min="1"
-              max="200"
-              value={draft.tables}
-              onChange={(e) => set({ tables: Math.max(1, Math.min(200, Number(e.target.value) || 1)) })}
-            />
-          </label>
         </div>
-        <p className="hint">Point the QR codes at the Public URL above so guests land on your menu.</p>
+        <p className="hint">Share this address with guests, for example on a printed code or a poster.</p>
       </div>
 
       {error && <p className="form-error">{error}</p>}
@@ -774,75 +759,5 @@ function HotelTab({ hotel, busy, onSaved, flash }: { hotel: AdminHotel; busy: bo
         </button>
       </div>
     </form>
-  )
-}
-
-/* ---------- Tables / QR tab ---------- */
-
-function TablesTab({ hotel }: { hotel: AdminHotel }) {
-  const [qr, setQr] = useState<Record<number, string>>({})
-  const tables = hotel.tables
-  const base = hotel.publicUrl.replace(/\/+$/, '')
-
-  useEffect(() => {
-    let alive = true
-    const jobs = Array.from({ length: tables }, (_, i) => i + 1).map((n) =>
-      QRCode.toDataURL(`${base}?table=${n}`, {
-        width: 320,
-        margin: 2,
-        color: { dark: '#23272b', light: '#ffffff' },
-      })
-        .then((url) => [n, url] as const)
-        .catch(() => [n, ''] as const),
-    )
-    Promise.all(jobs).then((rows) => {
-      if (alive) setQr(Object.fromEntries(rows))
-    })
-    return () => {
-      alive = false
-    }
-  }, [tables, base])
-
-  return (
-    <div className="tables-tab">
-      <div className="tables-tab__intro">
-        <h2>Print-ready QR codes</h2>
-        <p>
-          Each code opens your menu and shows the table number to your staff. Download one QR per table, or print the whole
-          sheet and cut them out. Save the QR codes as PNGs and share them with your printing shop.
-        </p>
-        <div className="tables-tab__actions">
-          <a className="btn btn--primary" href="#print-area" onClick={() => window.print()}>
-            🖨 Print all {tables} tables
-          </a>
-        </div>
-      </div>
-
-      <div id="print-area" className="qr-grid print-sheet">
-        <div className="print-head">
-          <strong>{hotel.nameEn}</strong> · Table QR codes · {new Date().toLocaleDateString()}
-        </div>
-        {Array.from({ length: tables }, (_, i) => i + 1).map((n) => (
-          <div key={n} className="qr-card">
-            <div className="qr-card__num">Table {n}</div>
-            {qr[n] ? (
-              <>
-                <img className="qr-card__img" src={qr[n]} alt={`QR code for table ${n}`} />
-                <div className="qr-card__meta">
-                  <span className="qr-card__url">{`${base}?table=${n}`}</span>
-                  <a href={qr[n]} download={`table-${n}-qr.png`} className="btn btn--ghost btn--sm">
-                    Download
-                  </a>
-                </div>
-              </>
-            ) : (
-              <div className="qr-card__img qr-card__img--loading">
-                <div className="spinner" />
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
-    </div>
   )
 }
