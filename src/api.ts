@@ -13,9 +13,19 @@ async function request<T>(url: string, options: RequestInit = {}): Promise<T> {
   }
   const token = getToken()
   if (token) headers.Authorization = `Bearer ${token}`
-  const res = await fetch(url, { ...options, headers })
+  let res: Response
+  try {
+    res = await fetch(url, { ...options, headers })
+  } catch {
+    throw new Error('Cannot reach the menu server. Is it running? Start it with START-MENU.bat')
+  }
   const data = await res.json().catch(() => ({}))
   if (!res.ok) {
+    if (res.status === 404) {
+      throw new Error(
+        'No admin server at this address. Open the admin panel on the computer that runs the menu: http://localhost:3000/admin',
+      )
+    }
     throw new Error((data as { error?: string }).error || `Request failed (${res.status})`)
   }
   return data as T
