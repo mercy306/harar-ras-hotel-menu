@@ -31,6 +31,8 @@ function emptyDb() {
       addressAm: 'ሐረር፣ ኢትዮጵያ',
       phone: '',
       currency: 'ETB',
+      hoursEn: 'Open daily, 7:00 AM - 10:00 PM',
+      hoursAm: 'ሰየትኍ, ከይ:00 ቴዕያት - ከ10:00 ማዳት',
       publicUrl: 'http://localhost:3000',
       tables: 10,
     },
@@ -129,6 +131,8 @@ function publicHotel(h) {
     addressAm: h.addressAm,
     phone: h.phone,
     currency: h.currency,
+    hoursEn: h.hoursEn || '',
+    hoursAm: h.hoursAm || '',
   }
 }
 
@@ -148,7 +152,7 @@ app.get('/api/menu', (req, res) => {
     nameEn: c.nameEn,
     nameAm: c.nameAm,
     emoji: c.emoji,
-    items: sortedItems(c.id),
+    items: sortedItems(c.id, true),
   }))
   res.json({ hotel: publicHotel(db.hotel), categories, generatedAt: new Date().toISOString() })
 })
@@ -191,6 +195,8 @@ app.put('/api/admin/hotel', requireAuth, (req, res) => {
   hotel.addressAm = clean(b.addressAm, 200)
   hotel.phone = clean(b.phone, 40)
   hotel.currency = clean(b.currency, 10) || 'ETB'
+  hotel.hoursEn = clean(b.hoursEn, 120)
+  hotel.hoursAm = clean(b.hoursAm, 120)
   hotel.publicUrl = clean(b.publicUrl, 200) || hotel.publicUrl
   hotel.tables = Math.max(1, Math.min(200, Math.floor(num(b.tables, hotel.tables))))
   saveDb()
@@ -256,8 +262,11 @@ app.post('/api/admin/items', requireAuth, (req, res) => {
     image: textOrNull(b.image, 300),
     available: b.available !== false,
     spicy: b.spicy === true,
+    popular: b.popular === true,
     ingredientsEn: ingredientList(b.ingredientsEn),
     ingredientsAm: ingredientList(b.ingredientsAm),
+    allergensEn: ingredientList(b.allergensEn),
+    allergensAm: ingredientList(b.allergensAm),
     sortOrder: b.sortOrder !== undefined ? num(b.sortOrder, 0) : db.items.filter((i) => i.categoryId === categoryId).length,
   }
   db.items.push(item)
@@ -277,8 +286,11 @@ app.put('/api/admin/items/:id', requireAuth, (req, res) => {
   item.image = textOrNull(b.image, 300) === null ? null : textOrNull(b.image, 300)
   item.available = b.available === true
   item.spicy = b.spicy === true
+  item.popular = b.popular === true
   if (b.ingredientsEn !== undefined) item.ingredientsEn = ingredientList(b.ingredientsEn)
   if (b.ingredientsAm !== undefined) item.ingredientsAm = ingredientList(b.ingredientsAm)
+  if (b.allergensEn !== undefined) item.allergensEn = ingredientList(b.allergensEn)
+  if (b.allergensAm !== undefined) item.allergensAm = ingredientList(b.allergensAm)
   if (b.categoryId && db.categories.some((c) => c.id === b.categoryId)) item.categoryId = b.categoryId
   if (b.sortOrder !== undefined) item.sortOrder = num(b.sortOrder, item.sortOrder)
   saveDb()

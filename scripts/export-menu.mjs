@@ -11,7 +11,7 @@ const sortedCategories = [...db.categories].sort(
 
 const sortedItems = (categoryId) =>
   db.items
-    .filter((item) => item.categoryId === categoryId && item.available)
+    .filter((item) => item.categoryId === categoryId)
     .sort((a, b) => a.sortOrder - b.sortOrder || a.nameEn.localeCompare(b.nameEn))
 
 const h = db.hotel
@@ -25,6 +25,8 @@ const payload = {
     addressAm: h.addressAm,
     phone: h.phone,
     currency: h.currency,
+    hoursEn: h.hoursEn || '',
+    hoursAm: h.hoursAm || '',
   },
   categories: sortedCategories.map((category) => ({
     id: category.id,

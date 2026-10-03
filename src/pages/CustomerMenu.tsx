@@ -287,7 +287,11 @@ function MenuItems({
     <ul className="items">
       {category.items.map((item) => (
         <li key={item.id} className="item-wrap">
-          <button className="item" onClick={() => onOpen(item.id)} type="button">
+          <button
+            className={`item${item.available ? '' : ' is-off'}`}
+            onClick={() => onOpen(item.id)}
+            type="button"
+          >
             <div className="item__body">
               <div className="item__top">
                 <h4 className="item__name">
@@ -301,6 +305,20 @@ function MenuItems({
                 <span className="item__dots" aria-hidden="true"></span>
                 <span className="item__price">{formatPrice(item.price, currency)}</span>
               </div>
+              {(!item.available || item.popular) && (
+                <div className="item__flags">
+                  {item.popular && (
+                    <span className="item__flag item__flag--pop">
+                      {lang === 'am' ? '★ የተመከረ' : '★ Recommended'}
+                    </span>
+                  )}
+                  {!item.available && (
+                    <span className="item__flag item__flag--off">
+                      {lang === 'am' ? '✖ ዛሬ የለም' : '✖ Unavailable'}
+                    </span>
+                  )}
+                </div>
+              )}
               {(lang === 'en' ? item.descriptionEn : item.descriptionAm) && (
                 <p className="item__desc">{lang === 'en' ? item.descriptionEn : item.descriptionAm}</p>
               )}
@@ -350,6 +368,26 @@ function HomePage({
 }) {
   const hotel = menu.hotel
   const t = (en: string, am: string) => (lang === 'am' ? am : en)
+  const [query, setQuery] = useState('')
+  const q = query.trim().toLowerCase()
+  const allItems = menu.categories.flatMap((c) => c.items.map((item) => ({ item, cat: c })))
+  const results = q
+    ? allItems.filter(({ item }) =>
+        [
+          item.nameEn,
+          item.nameAm,
+          item.descriptionEn,
+          item.descriptionAm,
+          ...(item.ingredientsEn || []),
+          ...(item.ingredientsAm || []),
+          ...(item.allergensEn || []),
+          ...(item.allergensAm || []),
+        ]
+          .join(' ')
+          .toLowerCase()
+          .includes(q),
+      )
+    : []
   const photoItems = menu.categories.flatMap((c) => c.items).filter((i) => Boolean(i.image))
   const heroItem = photoItems[2] ?? photoItems[0] ?? null
   const strip = [1, 6, 11]
@@ -391,6 +429,70 @@ function HomePage({
                 : 'Choose a section to see its dishes.'}
             </p>
 
+            <div className="qsearch">
+              <input
+                className="qsearch__input"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder={lang === 'am' ? 'ምግብ ይፈልጉ…' : 'Search dishes…'}
+                aria-label={lang === 'am' ? 'ምግብ ይፈልጉ' : 'Search dishes'}
+              />
+              {query && (
+                <button
+                  className="qsearch__clear"
+                  onClick={() => setQuery('')}
+                  type="button"
+                  aria-label={lang === 'am' ? 'አጽዳ' : 'Clear search'}
+                >
+                  ×
+                </button>
+              )}
+            </div>
+
+            {q ? (
+              <div className="results">
+                <div className="results__count">
+                  {results.length} {lang === 'am' ? 'ውጤት' : results.length === 1 ? 'match' : 'matches'}
+                </div>
+                {results.length === 0 ? (
+                  <p className="results__empty">
+                    {lang === 'am'
+                      ? 'ምንም አልተገኘም — ሌላ ቃል ይሞክሩ'
+                      : 'Nothing found — try another word'}
+                  </p>
+                ) : (
+                  <ul className="results__list">
+                    {results.slice(0, 15).map(({ item, cat }) => (
+                      <li key={item.id}>
+                        <button
+                          className="results__row"
+                          onClick={() => onOpen(item.id)}
+                          type="button"
+                        >
+                          {item.image ? (
+                            <img className="results__img" src={item.image} alt="" loading="lazy" />
+                          ) : (
+                            <span className="results__img results__img--emoji" aria-hidden="true">
+                              {cat.emoji}
+                            </span>
+                          )}
+                          <span className="results__text">
+                            <strong>{itemLabel(item, lang)}</strong>
+                            <small>{catLabel(cat, lang)}</small>
+                          </span>
+                          <em className="results__price">
+                            {formatPrice(item.price, hotel.currency)}
+                          </em>
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ) : null}
+
+            {!q && (
+              <>
             <nav className="cover__cats">
               {menu.categories.map((cat) => (
                 <button
@@ -472,6 +574,8 @@ function HomePage({
                 )}
               </div>
             )}
+            </>
+            )}
           </div>
 
           <aside className="cover__aside">
@@ -482,8 +586,10 @@ function HomePage({
               </figure>
             )}
 
-            <div className="poster__order">
-              <span className="poster__order-label">{t('Delivery Order:', 'ማዘዝ በስልክ:')}</span>
+            <div className="poster__order poster__order--quiet">
+              <span className="poster__order-label">
+                {t('Hotel / Takeaway:', 'ሆቴል / ወደ ቤት መውርድ:')}
+              </span>
               {hotel.phone && (
                 <a className="poster__phone" href={`tel:${hotel.phone.replace(/\\s/g, '')}`}>
                   {hotel.phone}
@@ -499,6 +605,13 @@ function HomePage({
 
         <footer className="poster__foot">
           <span>{lang === 'am' ? hotel.addressAm || hotel.addressEn : hotel.addressEn}</span>
+          {(lang === 'am' ? hotel.hoursAm || hotel.hoursEn : hotel.hoursEn) && (
+            <span className="poster__hours">
+              {lang === 'am'
+                ? `የአገልግሎት ሰያዜ: ${hotel.hoursAm || hotel.hoursEn}`
+                : `Hours: ${hotel.hoursEn}`}
+            </span>
+          )}
           <span>
             {lang === 'am' ? `ዋጃዎች በ${hotel.currency} ናቸው።` : `All prices in ${hotel.currency}`}
           </span>
@@ -699,6 +812,12 @@ function ItemPage({
           <div className="detail__price-row">
             <span className="detail__price">{formatPrice(item.price, hotel.currency)}</span>
             {item.spicy && <span className="badge badge--spicy">{t('Spicy 🌶', 'ቅመም 🌶')}</span>}
+            {item.popular && (
+              <span className="badge badge--pop">{t('★ Recommended', '★ የተመከረ')}</span>
+            )}
+            {!item.available && (
+              <span className="badge badge--off">{t('✖ Unavailable', '✖ ዛሬ የለም')}</span>
+            )}
           </div>
 
           {desc && <p className="detail__desc">{desc}</p>}
@@ -713,6 +832,24 @@ function ItemPage({
                   <li key={ing} className="detail__ing-item">
                     {ing}
                   </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {((lang === 'am' ? item.allergensAm : item.allergensEn) ?? []).length > 0 && (
+            <div className="detail__allergens">
+              <div className="detail__allergens-title">
+                {lang === 'am' ? '⚠️ አስገርቶች' : '⚠️ Allergens'}
+              </div>
+              <p>
+                {lang === 'am'
+                  ? 'ከሚከላልጡ በላይ የሚከላልጡ ንጽጽሮች አሉ። ማንኛውንም አስገርት ካለዎት ወደ አገልግሎት ባለሙዎች ይናገሩ።'
+                  : 'This dish may contain the allergens listed. Please tell your server if you have any allergy.'}
+              </p>
+              <ul className="detail__allergen-list">
+                {((lang === 'am' ? item.allergensAm : item.allergensEn) ?? []).map((a) => (
+                  <li key={a}>{a}</li>
                 ))}
               </ul>
             </div>

@@ -9,7 +9,9 @@
     "phone": "+251 256 660 027",
     "currency": "ETB",
     "publicUrl": "http://192.168.10.53:3000",
-    "tables": 10
+    "tables": 10,
+    "hoursEn": "Open daily, 7:00 AM - 10:00 PM",
+    "hoursAm": "በየቀኑ ከ7:00 ጠዋት - ከ10:00 ማታ"
   },
   "categories": [
     {
@@ -85,7 +87,14 @@
         "ጉልበት",
         "በርበሬ",
         "ንጥር ቅቤ"
-      ]
+      ],
+      "allergensEn": [
+        "Dairy"
+      ],
+      "allergensAm": [
+        "የወተት ምርት"
+      ],
+      "popular": true
     },
     {
       "id": "i-02",
@@ -114,7 +123,14 @@
         "አይብ",
         "ጎመን",
         "እንጀራ"
-      ]
+      ],
+      "allergensEn": [
+        "Dairy"
+      ],
+      "allergensAm": [
+        "የወተት ምርት"
+      ],
+      "popular": true
     },
     {
       "id": "i-03",
@@ -147,7 +163,16 @@
         "ቅባ",
         "ንጥር ቅቤ",
         "የተቀላሉ እንቁላል"
-      ]
+      ],
+      "allergensEn": [
+        "Dairy",
+        "Eggs"
+      ],
+      "allergensAm": [
+        "የወተት ምርት",
+        "እንቁላል"
+      ],
+      "popular": true
     },
     {
       "id": "i-04",
@@ -178,7 +203,14 @@
         "ቀይ በርበሬ",
         "ንጥር ቅቤ",
         "እንጀራ"
-      ]
+      ],
+      "allergensEn": [
+        "Dairy"
+      ],
+      "allergensAm": [
+        "የወተት ምርት"
+      ],
+      "popular": false
     },
     {
       "id": "i-05",
@@ -207,7 +239,10 @@
         "ቅቤ ሰርጎት",
         "ሳላጣ",
         "እንጀራ"
-      ]
+      ],
+      "allergensEn": [],
+      "allergensAm": [],
+      "popular": false
     },
     {
       "id": "i-06",
@@ -234,7 +269,10 @@
         "ጉልበት",
         "በርበሬ",
         "ንጥር ቅቤ"
-      ]
+      ],
+      "allergensEn": [],
+      "allergensAm": [],
+      "popular": false
     },
     {
       "id": "i-07",
@@ -267,7 +305,18 @@
         "ድንች",
         "ካትሑፕ",
         "ጨዋታና ቀይ በርበሬ"
-      ]
+      ],
+      "allergensEn": [
+        "Gluten",
+        "Dairy",
+        "Eggs"
+      ],
+      "allergensAm": [
+        "ስንዴ",
+        "የወተት ምርት",
+        "እንቁላል"
+      ],
+      "popular": false
     },
     {
       "id": "i-08",
@@ -294,7 +343,14 @@
         "ስክይል",
         "ሳር",
         "የተጠበሰ ቅባ"
-      ]
+      ],
+      "allergensEn": [
+        "Dairy"
+      ],
+      "allergensAm": [
+        "የወተት ምርት"
+      ],
+      "popular": true
     },
     {
       "id": "i-09",
@@ -319,7 +375,14 @@
         "የተጠበሰ ወተት",
         "የወተት አረፋ",
         "የካኮዎ እንብረት"
-      ]
+      ],
+      "allergensEn": [
+        "Dairy"
+      ],
+      "allergensAm": [
+        "የወተት ምርት"
+      ],
+      "popular": false
     },
     {
       "id": "i-10",
@@ -344,7 +407,14 @@
         "የተጠበሰ ወተት",
         "የወተት አረፋ",
         "የካኮዎ እንብረት"
-      ]
+      ],
+      "allergensEn": [
+        "Dairy"
+      ],
+      "allergensAm": [
+        "የወተት ምርት"
+      ],
+      "popular": true
     },
     {
       "id": "i-11",
@@ -375,7 +445,10 @@
         "ዘር",
         "ስኳር",
         "ውሃ"
-      ]
+      ],
+      "allergensEn": [],
+      "allergensAm": [],
+      "popular": false
     },
     {
       "id": "i-12",
@@ -402,7 +475,10 @@
         "ስኳር",
         "በረዶ",
         "ሎሚ"
-      ]
+      ],
+      "allergensEn": [],
+      "allergensAm": [],
+      "popular": false
     },
     {
       "id": "i-13",
@@ -429,7 +505,10 @@
         "በረዶ",
         "ውሃ",
         "ሎሚ"
-      ]
+      ],
+      "allergensEn": [],
+      "allergensAm": [],
+      "popular": false
     },
     {
       "id": "i-14",
@@ -458,7 +537,10 @@
         "ካሮት",
         "ዘር",
         "በረዶ"
-      ]
+      ],
+      "allergensEn": [],
+      "allergensAm": [],
+      "popular": false
     },
     {
       "id": "i-15",
@@ -485,7 +567,10 @@
         "ውሃ",
         "በረዶ",
         "ንጥሩጥር"
-      ]
+      ],
+      "allergensEn": [],
+      "allergensAm": [],
+      "popular": false
     },
     {
       "id": "i-16",
@@ -510,7 +595,14 @@
         "ሆፕስ",
         "ውሃ",
         "ኸምብ"
-      ]
+      ],
+      "allergensEn": [
+        "Gluten"
+      ],
+      "allergensAm": [
+        "ስንዴ"
+      ],
+      "popular": false
     },
     {
       "id": "i-17",
@@ -535,7 +627,14 @@
         "ሆፕስ",
         "ውሃ",
         "ኸምብ"
-      ]
+      ],
+      "allergensEn": [
+        "Gluten"
+      ],
+      "allergensAm": [
+        "ስንዴ"
+      ],
+      "popular": false
     },
     {
       "id": "i-18",
@@ -562,7 +661,14 @@
         "ጌሾ ቅጠል",
         "ቅመማቶች",
         "የፀዓት ብርሃን"
-      ]
+      ],
+      "allergensEn": [
+        "Sulfites"
+      ],
+      "allergensAm": [
+        "ሰልፋይት"
+      ],
+      "popular": false
     },
     {
       "id": "i-19",
@@ -587,7 +693,14 @@
         "ውሃ",
         "ኸምብ",
         "ሰልፋይት"
-      ]
+      ],
+      "allergensEn": [
+        "Sulfites"
+      ],
+      "allergensAm": [
+        "ሰልፋይት"
+      ],
+      "popular": false
     },
     {
       "id": "i-20",
@@ -612,7 +725,10 @@
         "ስኳር",
         "ጣዕም",
         "ካፌን"
-      ]
+      ],
+      "allergensEn": [],
+      "allergensAm": [],
+      "popular": false
     },
     {
       "id": "i-21",
@@ -635,7 +751,10 @@
         "የሰላም ውሃ",
         "የሚኒራል ጽሕፈት",
         "ካርቦን ዳይኦክሳይድ"
-      ]
+      ],
+      "allergensEn": [],
+      "allergensAm": [],
+      "popular": false
     },
     {
       "id": "i-22",
@@ -666,7 +785,16 @@
         "እንጀራ",
         "ቡና",
         "የሐረሪ ጣፋጮች"
-      ]
+      ],
+      "allergensEn": [
+        "Dairy",
+        "Eggs"
+      ],
+      "allergensAm": [
+        "የወተት ምርት",
+        "እንቁላል"
+      ],
+      "popular": true
     },
     {
       "id": "i-23",
@@ -695,7 +823,18 @@
         "እንጀራ",
         "ሳላጣ",
         "ቡና ወይም ሻይ"
-      ]
+      ],
+      "allergensEn": [
+        "Dairy",
+        "Eggs",
+        "Gluten"
+      ],
+      "allergensAm": [
+        "የወተት ምርት",
+        "እንቁላል",
+        "ስንዴ"
+      ],
+      "popular": false
     },
     {
       "id": "i-24",
@@ -714,7 +853,10 @@
       ],
       "ingredientsAm": [
         "የዛሬውን ግብዎች ከሰራተኛዎ ይጠይቁ"
-      ]
+      ],
+      "allergensEn": [],
+      "allergensAm": [],
+      "popular": false
     },
     {
       "id": "c4dde17d576e",
@@ -745,7 +887,14 @@
         "እሙዝ",
         "ኮርዮንደር",
         "የቅቤ ዘይት"
-      ]
+      ],
+      "allergensEn": [
+        "Gluten"
+      ],
+      "allergensAm": [
+        "ስንዴ"
+      ],
+      "popular": false
     },
     {
       "id": "199af32f1f98",
@@ -774,7 +923,14 @@
         "ቀይ በርበሬ",
         "ቅባ",
         "ጨዋታ"
-      ]
+      ],
+      "allergensEn": [
+        "Dairy"
+      ],
+      "allergensAm": [
+        "የወተት ምርት"
+      ],
+      "popular": true
     },
     {
       "id": "e06b0d089524",
@@ -805,7 +961,14 @@
         "ሽንኩርት",
         "ንጥር ቅቤ",
         "እንጀራ"
-      ]
+      ],
+      "allergensEn": [
+        "Dairy"
+      ],
+      "allergensAm": [
+        "የወተት ምርት"
+      ],
+      "popular": false
     },
     {
       "id": "8ac354e2f0c2",
@@ -834,7 +997,10 @@
         "ቅጠል",
         "ንጥር ቅቤ",
         "እንጀራ"
-      ]
+      ],
+      "allergensEn": [],
+      "allergensAm": [],
+      "popular": false
     },
     {
       "id": "0c1189a34bc6",
@@ -865,7 +1031,10 @@
         "የርስስ ዘይት",
         "ሎሚ",
         "ጨዋታ"
-      ]
+      ],
+      "allergensEn": [],
+      "allergensAm": [],
+      "popular": false
     },
     {
       "id": "8610c9f1e94e",
@@ -896,7 +1065,16 @@
         "ድንች",
         "ጨዋታ",
         "የቅቤ ዘይት"
-      ]
+      ],
+      "allergensEn": [
+        "Gluten",
+        "Dairy"
+      ],
+      "allergensAm": [
+        "ስንዴ",
+        "የወተት ምርት"
+      ],
+      "popular": false
     },
     {
       "id": "b93485aa9133",
@@ -927,7 +1105,16 @@
         "ጉልበት",
         "የርስስ ዘይት",
         "ቅጠል"
-      ]
+      ],
+      "allergensEn": [
+        "Gluten",
+        "Dairy"
+      ],
+      "allergensAm": [
+        "ስንዴ",
+        "የወተት ምርት"
+      ],
+      "popular": false
     },
     {
       "id": "0fc8ff1b32c2",
@@ -958,7 +1145,14 @@
         "ካሪ ዱኒያ",
         "የቅቤ ዘይት",
         "ጨዋታ"
-      ]
+      ],
+      "allergensEn": [
+        "Dairy"
+      ],
+      "allergensAm": [
+        "የወተት ምርት"
+      ],
+      "popular": false
     },
     {
       "id": "1654c5da209b",
@@ -987,7 +1181,16 @@
         "ባዝል",
         "የርስስ ዘይት",
         "ጨዋታ"
-      ]
+      ],
+      "allergensEn": [
+        "Gluten",
+        "Dairy"
+      ],
+      "allergensAm": [
+        "ስንዴ",
+        "የወተት ምርት"
+      ],
+      "popular": true
     },
     {
       "id": "6c71d490ce89",
@@ -1016,7 +1219,16 @@
         "ቲማቲም",
         "የቤት ስልጤስ",
         "ጨዋታ"
-      ]
+      ],
+      "allergensEn": [
+        "Gluten",
+        "Dairy"
+      ],
+      "allergensAm": [
+        "ስንዴ",
+        "የወተት ምርት"
+      ],
+      "popular": false
     },
     {
       "id": "632f74bfc24c",
@@ -1041,7 +1253,10 @@
         "የቅቤ ዘይት",
         "ጨዋታ",
         "ካትሑፕ"
-      ]
+      ],
+      "allergensEn": [],
+      "allergensAm": [],
+      "popular": false
     },
     {
       "id": "a5f34fa7f148",
@@ -1064,7 +1279,14 @@
         "እስፕሬሶ",
         "የተጠበሰ ወተት",
         "የወተት አረፋ"
-      ]
+      ],
+      "allergensEn": [
+        "Dairy"
+      ],
+      "allergensAm": [
+        "የወተት ምርት"
+      ],
+      "popular": false
     },
     {
       "id": "2b890269543b",
@@ -1085,7 +1307,10 @@
       "ingredientsAm": [
         "የተቀቀመ ቡና",
         "ሞቅ ውሃ"
-      ]
+      ],
+      "allergensEn": [],
+      "allergensAm": [],
+      "popular": false
     },
     {
       "id": "ec112c918828",
@@ -1110,7 +1335,14 @@
         "በረዶ",
         "ውሃ",
         "ስኳር ወይም ወተት"
-      ]
+      ],
+      "allergensEn": [
+        "Dairy"
+      ],
+      "allergensAm": [
+        "የወተት ምርት"
+      ],
+      "popular": false
     },
     {
       "id": "c28f8c9ee9cc",
@@ -1133,7 +1365,10 @@
         "የጥኩር ሻይ ቅጠል",
         "ውሃ",
         "ስኳር"
-      ]
+      ],
+      "allergensEn": [],
+      "allergensAm": [],
+      "popular": false
     },
     {
       "id": "66abc60d4808",
@@ -1160,7 +1395,10 @@
         "ውሃ",
         "በረዶ",
         "ሎሚ"
-      ]
+      ],
+      "allergensEn": [],
+      "allergensAm": [],
+      "popular": false
     },
     {
       "id": "6524ce750fe6",
@@ -1187,7 +1425,10 @@
         "ውሃ",
         "በረዶ",
         "ንጥሩጥር"
-      ]
+      ],
+      "allergensEn": [],
+      "allergensAm": [],
+      "popular": false
     },
     {
       "id": "c50ad8016cb6",
@@ -1214,7 +1455,10 @@
         "ውሃ",
         "በረዶ",
         "ሎሚ"
-      ]
+      ],
+      "allergensEn": [],
+      "allergensAm": [],
+      "popular": false
     },
     {
       "id": "47cf85aed801",
@@ -1241,7 +1485,10 @@
         "ማር",
         "በረዶ",
         "ቀይ ያለሰከርም"
-      ]
+      ],
+      "allergensEn": [],
+      "allergensAm": [],
+      "popular": false
     },
     {
       "id": "f8d0b126a6c4",
@@ -1268,7 +1515,10 @@
         "በረዶ",
         "ንጥሩጥር",
         "ጨዋታ"
-      ]
+      ],
+      "allergensEn": [],
+      "allergensAm": [],
+      "popular": false
     },
     {
       "id": "4e1b77499a39",
@@ -1295,7 +1545,14 @@
         "ኸምብ",
         "የክፍቢ ጊዜ",
         "ሰልፋይት"
-      ]
+      ],
+      "allergensEn": [
+        "Sulfites"
+      ],
+      "allergensAm": [
+        "ሰልፋይት"
+      ],
+      "popular": false
     },
     {
       "id": "2b4bac158089",
@@ -1322,7 +1579,10 @@
         "በረዶ",
         "ሎሚ",
         "ኩኒን"
-      ]
+      ],
+      "allergensEn": [],
+      "allergensAm": [],
+      "popular": false
     },
     {
       "id": "23fa9e4d3d20",
@@ -1349,7 +1609,10 @@
         "ስኳር",
         "የቪ ቫማኒኖች",
         "ጨማቅ ውሃ"
-      ]
+      ],
+      "allergensEn": [],
+      "allergensAm": [],
+      "popular": false
     },
     {
       "id": "b5e39fa5ad7b",
@@ -1372,7 +1635,14 @@
         "አዲስ የላም ወተት",
         "ውሃ",
         "ስቀመጥ"
-      ]
+      ],
+      "allergensEn": [
+        "Dairy"
+      ],
+      "allergensAm": [
+        "የወተት ምርት"
+      ],
+      "popular": false
     },
     {
       "id": "238b525d50c3",
@@ -1397,7 +1667,10 @@
         "ሎሚ",
         "ንጥሩጥር",
         "ማር"
-      ]
+      ],
+      "allergensEn": [],
+      "allergensAm": [],
+      "popular": false
     },
     {
       "id": "3450782a7cdc",
@@ -1426,7 +1699,18 @@
         "እንቁላል",
         "ቅባ",
         "ክሪም"
-      ]
+      ],
+      "allergensEn": [
+        "Gluten",
+        "Dairy",
+        "Eggs"
+      ],
+      "allergensAm": [
+        "ስንዴ",
+        "የወተት ምርት",
+        "እንቁላል"
+      ],
+      "popular": false
     },
     {
       "id": "7a00c381b634",
@@ -1453,7 +1737,16 @@
         "ስኳር",
         "ባኒላ ወይም ማንጎ",
         "በረዶ"
-      ]
+      ],
+      "allergensEn": [
+        "Dairy",
+        "Eggs"
+      ],
+      "allergensAm": [
+        "የወተት ምርት",
+        "እንቁላል"
+      ],
+      "popular": false
     },
     {
       "id": "af1df460ea6b",
@@ -1476,7 +1769,14 @@
         "የበቆሎ እንቁላል",
         "ቅባ ወይም ዘይት",
         "ጨዋታ"
-      ]
+      ],
+      "allergensEn": [
+        "Dairy"
+      ],
+      "allergensAm": [
+        "የወተት ምርት"
+      ],
+      "popular": false
     },
     {
       "id": "f13a4e4dc6b5",
@@ -1501,7 +1801,14 @@
         "ውሃ",
         "ቅባ",
         "ማር"
-      ]
+      ],
+      "allergensEn": [
+        "Gluten"
+      ],
+      "allergensAm": [
+        "ስንዴ"
+      ],
+      "popular": false
     }
   ]
 }

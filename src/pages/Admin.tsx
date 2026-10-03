@@ -290,7 +290,9 @@ function MenuTab({ data, selectedCatId, onSelectCat, onChanged, flash }: MenuTab
                         <span className="manage-item__price">{formatPrice(item.price, data.hotel.currency)}</span>
                       </div>
                       <div className="manage-item__meta">
-                        {!item.available && <span className="badge">Hidden</span>}
+                        {!item.available && <span className="badge">Unavailable</span>}
+                        {item.popular && <span className="badge">★ Recommended</span>}
+                        {(item.allergensEn?.length ?? 0) > 0 && <span className="badge">Allergens</span>}
                         <small>{item.nameAm}</small>
                       </div>
                     </div>
@@ -439,10 +441,13 @@ interface ItemForm {
   descriptionAm: string
   ingredientsEn: string
   ingredientsAm: string
+  allergensEn: string
+  allergensAm: string
   price: string
   image: string | null
   available: boolean
   spicy: boolean
+  popular: boolean
 }
 
 function ItemModal({
@@ -468,10 +473,13 @@ function ItemModal({
     descriptionAm: item?.descriptionAm ?? '',
     ingredientsEn: (item?.ingredientsEn ?? []).join(', '),
     ingredientsAm: (item?.ingredientsAm ?? []).join(', '),
+    allergensEn: (item?.allergensEn ?? []).join(', '),
+    allergensAm: (item?.allergensAm ?? []).join(', '),
     price: item ? String(item.price) : '',
     image: item?.image ?? null,
     available: item?.available ?? true,
     spicy: item?.spicy ?? false,
+    popular: item?.popular ?? false,
   }))
   const [busy, setBusy] = useState(false)
   const [uploading, setUploading] = useState(false)
@@ -496,10 +504,19 @@ function ItemModal({
         .split(/[,\n]/)
         .map((v) => v.trim())
         .filter(Boolean),
+      allergensEn: form.allergensEn
+        .split(/[,\n]/)
+        .map((v) => v.trim())
+        .filter(Boolean),
+      allergensAm: form.allergensAm
+        .split(/[,\n]/)
+        .map((v) => v.trim())
+        .filter(Boolean),
       price: Number(form.price) || 0,
       image: form.image,
       available: form.available,
       spicy: form.spicy,
+      popular: form.popular,
     }
     try {
       if (item) await api.updateItem(item.id, payload)
@@ -597,6 +614,25 @@ function ItemModal({
           />
         </label>
 
+        <label>
+          Allergens (English) — leave empty if none
+          <textarea
+            rows={2}
+            value={form.allergensEn}
+            onChange={(e) => setForm({ ...form, allergensEn: e.target.value })}
+            placeholder="dairy, gluten, eggs, nuts"
+          />
+        </label>
+        <label>
+          አስገርቶች (አማርኛ) — ከሌም ባዶ ይተዋቅሩ
+          <textarea
+            rows={2}
+            value={form.allergensAm}
+            onChange={(e) => setForm({ ...form, allergensAm: e.target.value })}
+            placeholder="የወተት ምርት፣ ስንዴ፣ እንቁላል፣ አተን"
+          />
+        </label>
+
         <div className="field">
           <span className="field__label">Photo</span>
           {form.image ? (
@@ -631,6 +667,10 @@ function ItemModal({
           <label className="check">
             <input type="checkbox" checked={form.spicy} onChange={(e) => setForm({ ...form, spicy: e.target.checked })} />
             Spicy 🌶
+          </label>
+          <label className="check">
+            <input type="checkbox" checked={form.popular} onChange={(e) => setForm({ ...form, popular: e.target.checked })} />
+            ★ Recommended
           </label>
         </div>
 
@@ -715,6 +755,22 @@ function HotelTab({ hotel, busy, onSaved, flash }: { hotel: AdminHotel; busy: bo
           <label>
             Tagline (አማርኛ)
             <input value={draft.taglineAm} onChange={(e) => set({ taglineAm: e.target.value })} />
+          </label>
+          <label>
+            Opening hours (English)
+            <input
+              value={draft.hoursEn ?? ''}
+              onChange={(e) => set({ hoursEn: e.target.value })}
+              placeholder="Open daily, 7:00 AM - 10:00 PM"
+            />
+          </label>
+          <label>
+            የአገልግሎት ሰያዜ (አማርኛ)
+            <input
+              value={draft.hoursAm ?? ''}
+              onChange={(e) => set({ hoursAm: e.target.value })}
+              placeholder="በየቀኑ ከ7:00 ጠዋት - ከ10:00 ማታ"
+            />
           </label>
         </div>
       </div>

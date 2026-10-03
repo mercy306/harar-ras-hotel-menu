@@ -7,6 +7,8 @@ export interface Hotel {
   addressAm: string
   phone: string
   currency: string
+  hoursEn?: string
+  hoursAm?: string
 }
 
 export interface AdminHotel extends Hotel {
@@ -32,8 +34,11 @@ export interface MenuItem {
   image: string | null
   available: boolean
   spicy: boolean
+  popular?: boolean
   ingredientsEn?: string[]
   ingredientsAm?: string[]
+  allergensEn?: string[]
+  allergensAm?: string[]
 }
 
 export interface PublicCategory extends Category {
