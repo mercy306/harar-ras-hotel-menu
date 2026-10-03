@@ -27,6 +27,8 @@ const payload = {
     currency: h.currency,
     hoursEn: h.hoursEn || '',
     hoursAm: h.hoursAm || '',
+    noticeEn: h.noticeEn || '',
+    noticeAm: h.noticeAm || '',
   },
   categories: sortedCategories.map((category) => ({
     id: category.id,

@@ -11,7 +11,9 @@
     "publicUrl": "http://192.168.10.53:3000",
     "tables": 10,
     "hoursEn": "Open daily, 7:00 AM - 10:00 PM",
-    "hoursAm": "በየቀኑ ከ7:00 ጠዋት - ከ10:00 ማታ"
+    "hoursAm": "በየቀኑ ከ7:00 ጠዋት - ከ10:00 ማታ",
+    "noticeEn": "Harari Traditional Feast every Sunday — 450 Birr, serves 2",
+    "noticeAm": "የሐረሪ ባህላዊ ድግስ እየሁሉ እሁን ቀን — 450 ብር፣ ለ2 ሰዎች"
   },
   "categories": [
     {
@@ -94,7 +96,8 @@
       "allergensAm": [
         "የወተት ምርት"
       ],
-      "popular": true
+      "popular": true,
+      "vegetarian": false
     },
     {
       "id": "i-02",
@@ -130,7 +133,8 @@
       "allergensAm": [
         "የወተት ምርት"
       ],
-      "popular": true
+      "popular": true,
+      "vegetarian": false
     },
     {
       "id": "i-03",
@@ -172,7 +176,8 @@
         "የወተት ምርት",
         "እንቁላል"
       ],
-      "popular": true
+      "popular": true,
+      "vegetarian": false
     },
     {
       "id": "i-04",
@@ -210,7 +215,8 @@
       "allergensAm": [
         "የወተት ምርት"
       ],
-      "popular": false
+      "popular": false,
+      "vegetarian": false
     },
     {
       "id": "i-05",
@@ -242,7 +248,8 @@
       ],
       "allergensEn": [],
       "allergensAm": [],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "i-06",
@@ -272,7 +279,8 @@
       ],
       "allergensEn": [],
       "allergensAm": [],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "i-07",
@@ -316,7 +324,8 @@
         "የወተት ምርት",
         "እንቁላል"
       ],
-      "popular": false
+      "popular": false,
+      "vegetarian": false
     },
     {
       "id": "i-08",
@@ -350,7 +359,8 @@
       "allergensAm": [
         "የወተት ምርት"
       ],
-      "popular": true
+      "popular": true,
+      "vegetarian": true
     },
     {
       "id": "i-09",
@@ -382,7 +392,8 @@
       "allergensAm": [
         "የወተት ምርት"
       ],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "i-10",
@@ -414,7 +425,8 @@
       "allergensAm": [
         "የወተት ምርት"
       ],
-      "popular": true
+      "popular": true,
+      "vegetarian": true
     },
     {
       "id": "i-11",
@@ -448,7 +460,8 @@
       ],
       "allergensEn": [],
       "allergensAm": [],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "i-12",
@@ -478,7 +491,8 @@
       ],
       "allergensEn": [],
       "allergensAm": [],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "i-13",
@@ -508,7 +522,8 @@
       ],
       "allergensEn": [],
       "allergensAm": [],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "i-14",
@@ -540,7 +555,8 @@
       ],
       "allergensEn": [],
       "allergensAm": [],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "i-15",
@@ -570,7 +586,8 @@
       ],
       "allergensEn": [],
       "allergensAm": [],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "i-16",
@@ -602,7 +619,8 @@
       "allergensAm": [
         "ስንዴ"
       ],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "i-17",
@@ -634,7 +652,8 @@
       "allergensAm": [
         "ስንዴ"
       ],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "i-18",
@@ -668,7 +687,8 @@
       "allergensAm": [
         "ሰልፋይት"
       ],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "i-19",
@@ -700,7 +720,8 @@
       "allergensAm": [
         "ሰልፋይት"
       ],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "i-20",
@@ -728,7 +749,8 @@
       ],
       "allergensEn": [],
       "allergensAm": [],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "i-21",
@@ -754,7 +776,8 @@
       ],
       "allergensEn": [],
       "allergensAm": [],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "i-22",
@@ -794,7 +817,8 @@
         "የወተት ምርት",
         "እንቁላል"
       ],
-      "popular": true
+      "popular": true,
+      "vegetarian": false
     },
     {
       "id": "i-23",
@@ -834,7 +858,8 @@
         "እንቁላል",
         "ስንዴ"
       ],
-      "popular": false
+      "popular": false,
+      "vegetarian": false
     },
     {
       "id": "i-24",
@@ -856,7 +881,8 @@
       ],
       "allergensEn": [],
       "allergensAm": [],
-      "popular": false
+      "popular": false,
+      "vegetarian": false
     },
     {
       "id": "c4dde17d576e",
@@ -894,7 +920,8 @@
       "allergensAm": [
         "ስንዴ"
       ],
-      "popular": false
+      "popular": false,
+      "vegetarian": false
     },
     {
       "id": "199af32f1f98",
@@ -930,7 +957,8 @@
       "allergensAm": [
         "የወተት ምርት"
       ],
-      "popular": true
+      "popular": true,
+      "vegetarian": false
     },
     {
       "id": "e06b0d089524",
@@ -968,7 +996,8 @@
       "allergensAm": [
         "የወተት ምርት"
       ],
-      "popular": false
+      "popular": false,
+      "vegetarian": false
     },
     {
       "id": "8ac354e2f0c2",
@@ -1000,7 +1029,8 @@
       ],
       "allergensEn": [],
       "allergensAm": [],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "0c1189a34bc6",
@@ -1034,7 +1064,8 @@
       ],
       "allergensEn": [],
       "allergensAm": [],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "8610c9f1e94e",
@@ -1074,7 +1105,8 @@
         "ስንዴ",
         "የወተት ምርት"
       ],
-      "popular": false
+      "popular": false,
+      "vegetarian": false
     },
     {
       "id": "b93485aa9133",
@@ -1114,7 +1146,8 @@
         "ስንዴ",
         "የወተት ምርት"
       ],
-      "popular": false
+      "popular": false,
+      "vegetarian": false
     },
     {
       "id": "0fc8ff1b32c2",
@@ -1152,7 +1185,8 @@
       "allergensAm": [
         "የወተት ምርት"
       ],
-      "popular": false
+      "popular": false,
+      "vegetarian": false
     },
     {
       "id": "1654c5da209b",
@@ -1190,7 +1224,8 @@
         "ስንዴ",
         "የወተት ምርት"
       ],
-      "popular": true
+      "popular": true,
+      "vegetarian": true
     },
     {
       "id": "6c71d490ce89",
@@ -1228,7 +1263,8 @@
         "ስንዴ",
         "የወተት ምርት"
       ],
-      "popular": false
+      "popular": false,
+      "vegetarian": false
     },
     {
       "id": "632f74bfc24c",
@@ -1256,7 +1292,8 @@
       ],
       "allergensEn": [],
       "allergensAm": [],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "a5f34fa7f148",
@@ -1286,7 +1323,8 @@
       "allergensAm": [
         "የወተት ምርት"
       ],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "2b890269543b",
@@ -1310,7 +1348,8 @@
       ],
       "allergensEn": [],
       "allergensAm": [],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "ec112c918828",
@@ -1342,7 +1381,8 @@
       "allergensAm": [
         "የወተት ምርት"
       ],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "c28f8c9ee9cc",
@@ -1368,7 +1408,8 @@
       ],
       "allergensEn": [],
       "allergensAm": [],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "66abc60d4808",
@@ -1398,7 +1439,8 @@
       ],
       "allergensEn": [],
       "allergensAm": [],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "6524ce750fe6",
@@ -1428,7 +1470,8 @@
       ],
       "allergensEn": [],
       "allergensAm": [],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "c50ad8016cb6",
@@ -1458,7 +1501,8 @@
       ],
       "allergensEn": [],
       "allergensAm": [],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "47cf85aed801",
@@ -1488,7 +1532,8 @@
       ],
       "allergensEn": [],
       "allergensAm": [],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "f8d0b126a6c4",
@@ -1518,7 +1563,8 @@
       ],
       "allergensEn": [],
       "allergensAm": [],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "4e1b77499a39",
@@ -1552,7 +1598,8 @@
       "allergensAm": [
         "ሰልፋይት"
       ],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "2b4bac158089",
@@ -1582,7 +1629,8 @@
       ],
       "allergensEn": [],
       "allergensAm": [],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "23fa9e4d3d20",
@@ -1612,7 +1660,8 @@
       ],
       "allergensEn": [],
       "allergensAm": [],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "b5e39fa5ad7b",
@@ -1642,7 +1691,8 @@
       "allergensAm": [
         "የወተት ምርት"
       ],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "238b525d50c3",
@@ -1670,7 +1720,8 @@
       ],
       "allergensEn": [],
       "allergensAm": [],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "3450782a7cdc",
@@ -1710,7 +1761,8 @@
         "የወተት ምርት",
         "እንቁላል"
       ],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "7a00c381b634",
@@ -1746,7 +1798,8 @@
         "የወተት ምርት",
         "እንቁላል"
       ],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "af1df460ea6b",
@@ -1776,7 +1829,8 @@
       "allergensAm": [
         "የወተት ምርት"
       ],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     },
     {
       "id": "f13a4e4dc6b5",
@@ -1808,7 +1862,8 @@
       "allergensAm": [
         "ስንዴ"
       ],
-      "popular": false
+      "popular": false,
+      "vegetarian": true
     }
   ]
 }

@@ -133,6 +133,8 @@ function publicHotel(h) {
     currency: h.currency,
     hoursEn: h.hoursEn || '',
     hoursAm: h.hoursAm || '',
+    noticeEn: h.noticeEn || '',
+    noticeAm: h.noticeAm || '',
   }
 }
 
@@ -197,6 +199,8 @@ app.put('/api/admin/hotel', requireAuth, (req, res) => {
   hotel.currency = clean(b.currency, 10) || 'ETB'
   hotel.hoursEn = clean(b.hoursEn, 120)
   hotel.hoursAm = clean(b.hoursAm, 120)
+  hotel.noticeEn = clean(b.noticeEn, 160)
+  hotel.noticeAm = clean(b.noticeAm, 160)
   hotel.publicUrl = clean(b.publicUrl, 200) || hotel.publicUrl
   hotel.tables = Math.max(1, Math.min(200, Math.floor(num(b.tables, hotel.tables))))
   saveDb()
@@ -263,6 +267,7 @@ app.post('/api/admin/items', requireAuth, (req, res) => {
     available: b.available !== false,
     spicy: b.spicy === true,
     popular: b.popular === true,
+    vegetarian: b.vegetarian === true,
     ingredientsEn: ingredientList(b.ingredientsEn),
     ingredientsAm: ingredientList(b.ingredientsAm),
     allergensEn: ingredientList(b.allergensEn),
@@ -287,6 +292,7 @@ app.put('/api/admin/items/:id', requireAuth, (req, res) => {
   item.available = b.available === true
   item.spicy = b.spicy === true
   item.popular = b.popular === true
+  item.vegetarian = b.vegetarian === true
   if (b.ingredientsEn !== undefined) item.ingredientsEn = ingredientList(b.ingredientsEn)
   if (b.ingredientsAm !== undefined) item.ingredientsAm = ingredientList(b.ingredientsAm)
   if (b.allergensEn !== undefined) item.allergensEn = ingredientList(b.allergensEn)

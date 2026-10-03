@@ -6121,4 +6121,113 @@ body.is-menu {
   .qsearch__input {
     font-size: 16px;
   }
+}/* ---------- dietary filter chips ---------- */
+.diets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 12px 0 2px;
+}
+.diet {
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 7px 12px;
+  color: rgba(245, 242, 247, 0.72);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.diet:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+.diet.is-on {
+  color: #0d0512;
+  background: linear-gradient(135deg, #7fe0a8, #4fc3ff);
+  border-color: transparent;
+  font-weight: 700;
+}
+
+/* ---------- vegetarian flag on cards ---------- */
+.item__flag--veg {
+  color: #9ff0bd;
+  background: rgba(127, 224, 168, 0.13);
+  border: 1px solid rgba(127, 224, 168, 0.3);
+}
+
+/* ---------- announcement banner ---------- */
+.banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin-bottom: 16px;
+  padding: 11px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #fff3d4;
+  background: linear-gradient(
+    100deg,
+    rgba(255, 45, 85, 0.2),
+    rgba(79, 195, 255, 0.14)
+  );
+  border: 1px solid rgba(255, 212, 121, 0.34);
+  border-radius: 14px;
+}
+.banner > span {
+  flex: 0 0 auto;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+/* ---------- sort control ---------- */
+.sorts {
+  display: flex;
+  gap: 6px;
+  margin: 0 0 14px;
+  padding-bottom: 2px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.sorts::-webkit-scrollbar {
+  display: none;
+}
+.sort {
+  flex: 0 0 auto;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 7px 12px;
+  white-space: nowrap;
+  color: rgba(245, 242, 247, 0.68);
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 999px;
+  cursor: pointer;
+}
+.sort:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+.sort.is-on {
+  color: #fff;
+  background: rgba(255, 45, 85, 0.24);
+  border-color: rgba(255, 45, 85, 0.5);
+}
+
+@media (max-width: 720px) {
+  .diet,
+  .sort {
+    font-size: 13px;
+    padding: 9px 13px;
+  }
+}
+.results__more {
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: rgba(245, 242, 247, 0.55);
 }

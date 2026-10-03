@@ -292,6 +292,7 @@ function MenuTab({ data, selectedCatId, onSelectCat, onChanged, flash }: MenuTab
                       <div className="manage-item__meta">
                         {!item.available && <span className="badge">Unavailable</span>}
                         {item.popular && <span className="badge">★ Recommended</span>}
+                        {item.vegetarian && <span className="badge">🌱 Veg</span>}
                         {(item.allergensEn?.length ?? 0) > 0 && <span className="badge">Allergens</span>}
                         <small>{item.nameAm}</small>
                       </div>
@@ -448,6 +449,7 @@ interface ItemForm {
   available: boolean
   spicy: boolean
   popular: boolean
+  vegetarian: boolean
 }
 
 function ItemModal({
@@ -480,6 +482,7 @@ function ItemModal({
     available: item?.available ?? true,
     spicy: item?.spicy ?? false,
     popular: item?.popular ?? false,
+    vegetarian: item?.vegetarian ?? false,
   }))
   const [busy, setBusy] = useState(false)
   const [uploading, setUploading] = useState(false)
@@ -517,6 +520,7 @@ function ItemModal({
       available: form.available,
       spicy: form.spicy,
       popular: form.popular,
+      vegetarian: form.vegetarian,
     }
     try {
       if (item) await api.updateItem(item.id, payload)
@@ -672,6 +676,10 @@ function ItemModal({
             <input type="checkbox" checked={form.popular} onChange={(e) => setForm({ ...form, popular: e.target.checked })} />
             ★ Recommended
           </label>
+          <label className="check">
+            <input type="checkbox" checked={form.vegetarian} onChange={(e) => setForm({ ...form, vegetarian: e.target.checked })} />
+            🌱 Vegetarian
+          </label>
         </div>
 
         {error && <p className="form-error">{error}</p>}
@@ -770,6 +778,22 @@ function HotelTab({ hotel, busy, onSaved, flash }: { hotel: AdminHotel; busy: bo
               value={draft.hoursAm ?? ''}
               onChange={(e) => set({ hoursAm: e.target.value })}
               placeholder="በየቀኑ ከ7:00 ጠዋት - ከ10:00 ማታ"
+            />
+          </label>
+          <label className="wide">
+            Announcement banner (English) — leave empty to hide
+            <input
+              value={draft.noticeEn ?? ''}
+              onChange={(e) => set({ noticeEn: e.target.value })}
+              placeholder="Harari Traditional Feast every Sunday — 450 Birr, serves 2"
+            />
+          </label>
+          <label className="wide">
+            የማስታወቂያ መልእክት (አማርኛ) — ለመደበስ ባዶ ይተዋቅሩ
+            <input
+              value={draft.noticeAm ?? ''}
+              onChange={(e) => set({ noticeAm: e.target.value })}
+              placeholder="የሐረሪ ባህላዊ ድግስ እየሁሉ እሁን ቀን — 450 ብር፣ ለ2 ሰዎች"
             />
           </label>
         </div>

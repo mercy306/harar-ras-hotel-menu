@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { api, formatPrice } from '../api'
 import type { Lang, MenuItem, PublicCategory, PublicMenu } from '../types'
 
@@ -260,6 +260,16 @@ function LangToggle({ lang, setLang }: { lang: Lang; setLang: (l: Lang) => void 
   )
 }
 
+type Diet = 'all' | 'veg' | 'nodairy' | 'nogluten'
+type Sort = 'chef' | 'rec' | 'low' | 'high' | 'az'
+
+function matchesDiet(item: MenuItem, diet: Diet): boolean {
+  if (diet === 'all') return true
+  if (diet === 'veg') return Boolean(item.vegetarian)
+  if (diet === 'nodairy') return !(item.allergensEn || []).includes('Dairy')
+  return !(item.allergensEn || []).includes('Gluten')
+}
+
 function itemLabel(item: { nameEn: string; nameAm: string }, lang: Lang): string {
   return lang === 'am' ? item.nameAm || item.nameEn : item.nameEn
 }
@@ -305,11 +315,16 @@ function MenuItems({
                 <span className="item__dots" aria-hidden="true"></span>
                 <span className="item__price">{formatPrice(item.price, currency)}</span>
               </div>
-              {(!item.available || item.popular) && (
+              {(!item.available || item.popular || item.vegetarian) && (
                 <div className="item__flags">
                   {item.popular && (
                     <span className="item__flag item__flag--pop">
                       {lang === 'am' ? '★ የተመከረ' : '★ Recommended'}
+                    </span>
+                  )}
+                  {item.vegetarian && (
+                    <span className="item__flag item__flag--veg">
+                      {lang === 'am' ? '🌱 ጾጣነት' : '🌱 Veg'}
                     </span>
                   )}
                   {!item.available && (
@@ -369,11 +384,15 @@ function HomePage({
   const hotel = menu.hotel
   const t = (en: string, am: string) => (lang === 'am' ? am : en)
   const [query, setQuery] = useState('')
+  const [diet, setDiet] = useState<Diet>('all')
   const q = query.trim().toLowerCase()
   const allItems = menu.categories.flatMap((c) => c.items.map((item) => ({ item, cat: c })))
-  const results = q
-    ? allItems.filter(({ item }) =>
-        [
+  const filtering = q || diet !== 'all'
+  const results = filtering
+    ? allItems.filter(({ item }) => {
+        if (!matchesDiet(item, diet)) return false
+        if (!q) return true
+        return [
           item.nameEn,
           item.nameAm,
           item.descriptionEn,
@@ -385,8 +404,8 @@ function HomePage({
         ]
           .join(' ')
           .toLowerCase()
-          .includes(q),
-      )
+          .includes(q)
+      })
     : []
   const photoItems = menu.categories.flatMap((c) => c.items).filter((i) => Boolean(i.image))
   const heroItem = photoItems[2] ?? photoItems[0] ?? null
@@ -418,6 +437,13 @@ function HomePage({
 
         <div className="cover">
           <div className="cover__lead">
+            {(lang === 'am' ? hotel.noticeAm || hotel.noticeEn : hotel.noticeEn) && (
+              <div className="banner">
+                <span aria-hidden="true">📣</span>
+                {lang === 'am' ? hotel.noticeAm || hotel.noticeEn : hotel.noticeEn}
+              </div>
+            )}
+
             <h1 className="poster__title">
               <span>Food</span>
               <span>Menu</span>
@@ -449,20 +475,48 @@ function HomePage({
               )}
             </div>
 
-            {q ? (
+            <div className="diets" role="group" aria-label={lang === 'am' ? 'ማጣሪያ' : 'Dietary filters'}>
+              {(
+                [
+                  ['all', lang === 'am' ? 'ሁሉም' : 'All'],
+                  ['veg', lang === 'am' ? '🌱 ጾጣነት' : '🌱 Vegetarian'],
+                  ['nodairy', lang === 'am' ? 'የወተት የለም' : 'No dairy'],
+                  ['nogluten', lang === 'am' ? 'ስንዴ የለም' : 'No gluten'],
+                ] as [Diet, string][]
+              ).map(([key, label]) => (
+                <button
+                  key={key}
+                  className={`diet${diet === key ? ' is-on' : ''}`}
+                  onClick={() => setDiet(key)}
+                  type="button"
+                  aria-pressed={diet === key}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+
+            {filtering ? (
               <div className="results">
                 <div className="results__count">
-                  {results.length} {lang === 'am' ? 'ውጤት' : results.length === 1 ? 'match' : 'matches'}
+                  {results.length}{' '}
+                  {lang === 'am'
+                    ? 'ውጤት'
+                    : results.length === 1
+                      ? (q ? 'match' : 'dish')
+                      : q
+                        ? 'matches'
+                        : 'dishes'}
                 </div>
                 {results.length === 0 ? (
                   <p className="results__empty">
                     {lang === 'am'
-                      ? 'ምንም አልተገኘም — ሌላ ቃል ይሞክሩ'
-                      : 'Nothing found — try another word'}
+                      ? 'ምንም አልተገኘም — ሌላ ማጣሪያ ወይም ቃል ይሞክሩ'
+                      : 'Nothing matches — try another word or filter'}
                   </p>
                 ) : (
                   <ul className="results__list">
-                    {results.slice(0, 15).map(({ item, cat }) => (
+                    {results.slice(0, 24).map(({ item, cat }) => (
                       <li key={item.id}>
                         <button
                           className="results__row"
@@ -478,7 +532,10 @@ function HomePage({
                           )}
                           <span className="results__text">
                             <strong>{itemLabel(item, lang)}</strong>
-                            <small>{catLabel(cat, lang)}</small>
+                            <small>
+                            {catLabel(cat, lang)}
+                            {item.vegetarian ? (lang === 'am' ? ' · 🌱' : ' · veg') : ''}
+                          </small>
                           </span>
                           <em className="results__price">
                             {formatPrice(item.price, hotel.currency)}
@@ -488,10 +545,17 @@ function HomePage({
                     ))}
                   </ul>
                 )}
+                {results.length > 24 && (
+                  <p className="results__more">
+                    {lang === 'am'
+                      ? `ከ${results.length} ውጤቶች ${24} ብቻ ታይተዋል — ማጣሪያውን ያጠሩ`
+                      : `Showing 24 of ${results.length} — narrow your search or filter`}
+                  </p>
+                )}
               </div>
             ) : null}
 
-            {!q && (
+            {!filtering && (
               <>
             <nav className="cover__cats">
               {menu.categories.map((cat) => (
@@ -653,6 +717,29 @@ function CategoryPage({
   const others = menu.categories.filter((c) => c.id !== category.id)
   const t = (en: string, am: string) => (lang === 'am' ? am : en)
   const name = catLabel(category, lang)
+  const [sort, setSort] = useState<Sort>('chef')
+
+  const sorted = useMemo(() => {
+    const rows = category.items.map((item, index) => ({ item, index }))
+    const keep = (a: { index: number }, b: { index: number }) => a.index - b.index
+    if (sort === 'low') rows.sort((a, b) => a.item.price - b.item.price || keep(a, b))
+    else if (sort === 'high') rows.sort((a, b) => b.item.price - a.item.price || keep(a, b))
+    else if (sort === 'rec')
+      rows.sort(
+        (a, b) => Number(Boolean(b.item.popular)) - Number(Boolean(a.item.popular)) || keep(a, b),
+      )
+    else if (sort === 'az')
+      rows.sort((a, b) => itemLabel(a.item, lang).localeCompare(itemLabel(b.item, lang)))
+    return rows.map((r) => r.item)
+  }, [category.items, sort, lang])
+
+  const sortOptions: [Sort, string, string][] = [
+    ['chef', lang === 'am' ? 'ተራ ብት' : "Chef's order", 'ተራ ብት'],
+    ['rec', lang === 'am' ? '★ የተመከረ' : '★ Recommended', '★ የተመከረ'],
+    ['low', lang === 'am' ? 'ዝቅተኛ ዋጋ' : 'Price: low to high', 'ዝቅተኛ ዋጋ'],
+    ['high', lang === 'am' ? 'ከፍተኛ ዋጋ' : 'Price: high to low', 'ከፍተኛ ዋጋ'],
+    ['az', 'A–Z', 'A–Z'],
+  ]
 
   return (
     <div className="detail">
@@ -677,20 +764,36 @@ function CategoryPage({
           </div>
         </div>
 
-        <div className={`detail__content cat-scroll${category.items.length > 7 ? ' is-many' : ''}`}>
+        <div className="detail__content cat-scroll">
           {category.items.length === 0 ? (
             <div className="empty">
               <p className="empty__emoji">🍽️</p>
               <p>{t('No items here yet.', 'አሁን ምንም እቃ የለም።')}</p>
             </div>
           ) : (
-            <MenuItems
-              category={category}
-              lang={lang}
-              currency={hotel.currency}
-              onOpen={onOpen}
-              onZoom={onZoom}
-            />
+            <>
+              <div className="sorts" role="group" aria-label={t('Sort dishes', 'ምግቦችን አቅርብ')}>
+                {sortOptions.map(([key, enLabel, amLabel]) => (
+                  <button
+                    key={key}
+                    className={`sort${sort === key ? ' is-on' : ''}`}
+                    onClick={() => setSort(key)}
+                    type="button"
+                    aria-pressed={sort === key}
+                  >
+                    {lang === 'am' ? amLabel : enLabel}
+                  </button>
+                ))}
+              </div>
+
+              <MenuItems
+                category={{ ...category, items: sorted }}
+                lang={lang}
+                currency={hotel.currency}
+                onOpen={onOpen}
+                onZoom={onZoom}
+              />
+            </>
           )}
 
           {others.length > 0 && (

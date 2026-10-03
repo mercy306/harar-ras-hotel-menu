@@ -9,6 +9,8 @@ export interface Hotel {
   currency: string
   hoursEn?: string
   hoursAm?: string
+  noticeEn?: string
+  noticeAm?: string
 }
 
 export interface AdminHotel extends Hotel {
@@ -35,6 +37,7 @@ export interface MenuItem {
   available: boolean
   spicy: boolean
   popular?: boolean
+  vegetarian?: boolean
   ingredientsEn?: string[]
   ingredientsAm?: string[]
   allergensEn?: string[]
